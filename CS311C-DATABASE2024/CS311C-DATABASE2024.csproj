@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E16189AC-3F0A-4317-B803-4A47091A4735}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CS311C_DATABASE2024</RootNamespace>
+    <AssemblyName>CS311C-DATABASE2024</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Mark\Downloads\test2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/CS311C-DATABASE2024/</UpdateUrl>
+    <MinimumRequiredVersion>1.0.0.5</MinimumRequiredVersion>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EF838276BE0626D3CB625D088DD022BBCC56B529</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CS311C-DATABASE2024_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>arellano_university_logo_au_freelogovectors.net_-400x400.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.2.0.0\lib\net35-Client\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\CS311 library\CS311 library\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.3.0.0\lib\net35-Client\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="cs311c2024DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cs311c2024DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cs311c2024DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cs311c2024DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cs311c2024DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccounts.Designer.cs">
+      <DependentUpon>frmAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourses.Designer.cs">
+      <DependentUpon>frmCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmloading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmloading.Designer.cs">
+      <DependentUpon>frmloading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewAccount.Designer.cs">
+      <DependentUpon>frmNewAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewCourse.Designer.cs">
+      <DependentUpon>frmNewCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewStrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewStrand.Designer.cs">
+      <DependentUpon>frmNewStrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewStudent.Designer.cs">
+      <DependentUpon>frmNewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewViolation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewViolation.Designer.cs">
+      <DependentUpon>frmNewViolation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStrands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStrands.Designer.cs">
+      <DependentUpon>frmStrands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudents.Designer.cs">
+      <DependentUpon>frmStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateAccount.Designer.cs">
+      <DependentUpon>frmUpdateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateCourse.Designer.cs">
+      <DependentUpon>frmUpdateCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateStrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateStrand.Designer.cs">
+      <DependentUpon>frmUpdateStrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateStudent.Designer.cs">
+      <DependentUpon>frmUpdateStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateViolation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateViolation.Designer.cs">
+      <DependentUpon>frmUpdateViolation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViolation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViolation.Designer.cs">
+      <DependentUpon>frmViolation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAccounts.resx">
+      <DependentUpon>frmAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourses.resx">
+      <DependentUpon>frmCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmloading.resx">
+      <DependentUpon>frmloading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAccount.resx">
+      <DependentUpon>frmNewAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewCourse.resx">
+      <DependentUpon>frmNewCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewStrand.resx">
+      <DependentUpon>frmNewStrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewStudent.resx">
+      <DependentUpon>frmNewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewViolation.resx">
+      <DependentUpon>frmNewViolation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStrands.resx">
+      <DependentUpon>frmStrands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudents.resx">
+      <DependentUpon>frmStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateAccount.resx">
+      <DependentUpon>frmUpdateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateCourse.resx">
+      <DependentUpon>frmUpdateCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateStrand.resx">
+      <DependentUpon>frmUpdateStrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateStudent.resx">
+      <DependentUpon>frmUpdateStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateViolation.resx">
+      <DependentUpon>frmUpdateViolation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViolation.resx">
+      <DependentUpon>frmViolation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="CS311C-DATABASE2024_TemporaryKey.pfx" />
+    <None Include="cs311c2024DataSet.xsc">
+      <DependentUpon>cs311c2024DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet.xss">
+      <DependentUpon>cs311c2024DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet1.xsc">
+      <DependentUpon>cs311c2024DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet1.xss">
+      <DependentUpon>cs311c2024DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet2.xsc">
+      <DependentUpon>cs311c2024DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet2.xss">
+      <DependentUpon>cs311c2024DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet3.xsc">
+      <DependentUpon>cs311c2024DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet3.xss">
+      <DependentUpon>cs311c2024DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet4.xsc">
+      <DependentUpon>cs311c2024DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet4.xss">
+      <DependentUpon>cs311c2024DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green and Blue Modern Virtual Event Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arellano-university-logo-D0C35BB9A2-seeklogo.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-username-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green and Blue Modern Virtual Event Background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green and Blue Modern Virtual Event Background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green and Blue Modern Virtual Event Background3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arellano-university-logo-D0C35BB9A2-seeklogo.com1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-username-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="arellano_university_logo_au_freelogovectors.net_-400x400.ico" />
+    <None Include="Resources\icons8-menu-bar-30.png" />
+    <None Include="Resources\icons8-logout-30.png" />
+    <None Include="Resources\icons8-report-30.png" />
+    <None Include="Resources\icons8-about-30.png" />
+    <None Include="Resources\icons8-warning-30.png" />
+    <None Include="Resources\icons8-school-30.png" />
+    <None Include="Resources\icons8-course-assign-30.png" />
+    <None Include="Resources\icons8-student-30.png" />
+    <None Include="Resources\icons8-account-30.png" />
+    <None Include="Resources\icons8-maintenance-30.png" />
+    <None Include="Resources\icons8-menu-bar-100.png" />
+    <None Include="Resources\menu-bar.png" />
+    <None Include="Resources\sidebar-2-48.png" />
+    <None Include="Resources\icons8-add-male-user-30.png" />
+    <None Include="Resources\icons8-edit-account-30.png" />
+    <None Include="Resources\icons8-delete-30.png" />
+    <None Include="Resources\icons8-refresh-30.png" />
+    <None Include="Resources\icons8-username-30.png" />
+    <None Include="Resources\icons8-account-50.png" />
+    <None Include="Resources\icons8-password-key-30.png" />
+    <None Include="Resources\icons8-student-male-100.png" />
+    <None Include="Resources\icons8-account-management-100.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\login-page.png" />
+    <None Include="Resources\profile-update.png" />
+    <None Include="Resources\new-account.png" />
+    <None Include="Resources\icons8-course-100.png" />
+    <None Include="Resources\baf30016661111.562af87faf872.png" />
+    <None Include="Resources\violation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="MySql.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
