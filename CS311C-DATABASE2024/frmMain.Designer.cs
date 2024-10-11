@@ -47,10 +47,10 @@
             this.btnstudents = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnstrand = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnviolation = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btncourse = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnviolation = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnabout = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -69,8 +69,8 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -192,6 +192,8 @@
             // 
             this.btnMaintenance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.btnMaintenance.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaintenance.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
+            this.btnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaintenance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaintenance.ForeColor = System.Drawing.Color.White;
             this.btnMaintenance.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_maintenance_30;
@@ -218,6 +220,8 @@
             // 
             this.btnaccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
             this.btnaccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnaccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.btnaccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaccount.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaccount.ForeColor = System.Drawing.Color.White;
             this.btnaccount.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_account_30;
@@ -244,6 +248,8 @@
             // 
             this.btnstudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
             this.btnstudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnstudents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.btnstudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnstudents.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnstudents.ForeColor = System.Drawing.Color.White;
             this.btnstudents.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_student_30;
@@ -270,6 +276,8 @@
             // 
             this.btnstrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
             this.btnstrand.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnstrand.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.btnstrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnstrand.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnstrand.ForeColor = System.Drawing.Color.White;
             this.btnstrand.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_school_30;
@@ -284,32 +292,6 @@
             this.btnstrand.UseVisualStyleBackColor = false;
             this.btnstrand.Click += new System.EventHandler(this.btnstrand_Click);
             // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.btnviolation);
-            this.panel7.Location = new System.Drawing.Point(3, 288);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(228, 51);
-            this.panel7.TabIndex = 6;
-            // 
-            // btnviolation
-            // 
-            this.btnviolation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
-            this.btnviolation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnviolation.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnviolation.ForeColor = System.Drawing.Color.White;
-            this.btnviolation.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_warning_30;
-            this.btnviolation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnviolation.Location = new System.Drawing.Point(-14, -10);
-            this.btnviolation.Name = "btnviolation";
-            this.btnviolation.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnviolation.Size = new System.Drawing.Size(257, 68);
-            this.btnviolation.TabIndex = 2;
-            this.btnviolation.Text = "            Violations";
-            this.btnviolation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnviolation.UseVisualStyleBackColor = false;
-            this.btnviolation.Click += new System.EventHandler(this.btnviolation_Click);
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btncourse);
@@ -322,6 +304,8 @@
             // 
             this.btncourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
             this.btncourse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncourse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.btncourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncourse.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncourse.ForeColor = System.Drawing.Color.White;
             this.btncourse.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_course_assign_30;
@@ -336,6 +320,34 @@
             this.btncourse.UseVisualStyleBackColor = false;
             this.btncourse.Click += new System.EventHandler(this.btncourse_Click);
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.btnviolation);
+            this.panel7.Location = new System.Drawing.Point(3, 288);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(228, 51);
+            this.panel7.TabIndex = 6;
+            // 
+            // btnviolation
+            // 
+            this.btnviolation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
+            this.btnviolation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnviolation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.btnviolation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnviolation.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnviolation.ForeColor = System.Drawing.Color.White;
+            this.btnviolation.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_warning_30;
+            this.btnviolation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnviolation.Location = new System.Drawing.Point(-14, -10);
+            this.btnviolation.Name = "btnviolation";
+            this.btnviolation.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnviolation.Size = new System.Drawing.Size(257, 68);
+            this.btnviolation.TabIndex = 2;
+            this.btnviolation.Text = "            Violations";
+            this.btnviolation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnviolation.UseVisualStyleBackColor = false;
+            this.btnviolation.Click += new System.EventHandler(this.btnviolation_Click);
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.btnabout);
@@ -348,6 +360,8 @@
             // 
             this.btnabout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.btnabout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnabout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
+            this.btnabout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnabout.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnabout.ForeColor = System.Drawing.Color.White;
             this.btnabout.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_about_30;
@@ -373,6 +387,8 @@
             // 
             this.btnreports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.btnreports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnreports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
+            this.btnreports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnreports.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnreports.ForeColor = System.Drawing.Color.White;
             this.btnreports.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_report_30;
@@ -398,6 +414,8 @@
             // 
             this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.btnlogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogout.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogout.ForeColor = System.Drawing.Color.White;
             this.btnlogout.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_logout_30;
@@ -454,8 +472,8 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
