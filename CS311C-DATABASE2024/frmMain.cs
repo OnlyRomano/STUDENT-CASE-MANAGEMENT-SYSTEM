@@ -116,6 +116,12 @@ namespace CS311C_DATABASE2024
             violationfrm.MdiParent = this;
             violationfrm.Show();
         }
+
+        private void sidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = "Username: " + username;
