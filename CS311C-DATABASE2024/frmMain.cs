@@ -65,63 +65,61 @@ namespace CS311C_DATABASE2024
                 }
             }
         }
-
-        private void btnMaintenance_Click(object sender, EventArgs e)
-        {
-            menutransition.Start();
-        }
-
         private void menu_Click(object sender, EventArgs e)
         {
             sidebartimer.Start();
         }
 
-        private void btnaccount_Click(object sender, EventArgs e)
+        private void btnMaintenance_Click_1(object sender, EventArgs e)
         {
-            frmAccounts accountsform = new frmAccounts(username);
-            accountsform.MdiParent = this;
-            accountsform.Show();
+            menutransition.Start();
         }
 
-        private void btnstudents_Click(object sender, EventArgs e)
-        {
-            frmStudents studentform = new frmStudents(username);
-            studentform.MdiParent = this;
-            studentform.Show();
-        }
-
-        private void btncourse_Click(object sender, EventArgs e)
-        {
-            frmCourses coursefrm = new frmCourses(username);
-            coursefrm.MdiParent = this;
-            coursefrm.Show();
-        }
-
-        private void btnstrand_Click(object sender, EventArgs e)
-        {
-            frmStrands strandfrm = new frmStrands(username);
-            strandfrm.MdiParent = this;
-            strandfrm.Show();
-        }
-
-        private void btnviolation_Click(object sender, EventArgs e)
-        {
-            frmViolation violationfrm = new frmViolation(username);
-            violationfrm.MdiParent = this;
-            violationfrm.Show();
-        }
-
-        private void btnlogout_Click(object sender, EventArgs e)
+        private void btnlogout_Click_1(object sender, EventArgs e)
         {
             this.Close();
             frmlogin loginform = new frmlogin();
             loginform.Show();
         }
 
+        private void btnaccount_Click_1(object sender, EventArgs e)
+        {
+            frmAccounts accountsform = new frmAccounts(username);
+            accountsform.MdiParent = this;
+            accountsform.Show();
+        }
+
+        private void btnstudents_Click_1(object sender, EventArgs e)
+        {
+            frmStudents studentform = new frmStudents(username);
+            studentform.MdiParent = this;
+            studentform.Show();
+        }
+
+        private void btncourse_Click_1(object sender, EventArgs e)
+        {
+            frmCourses coursefrm = new frmCourses(username);
+            coursefrm.MdiParent = this;
+            coursefrm.Show();
+        }
+
+        private void btnstrand_Click_1(object sender, EventArgs e)
+        {
+            frmStrands strandfrm = new frmStrands(username);
+            strandfrm.MdiParent = this;
+            strandfrm.Show();
+        }
+
+        private void btnviolation_Click_1(object sender, EventArgs e)
+        {
+            frmViolation violationfrm = new frmViolation(username);
+            violationfrm.MdiParent = this;
+            violationfrm.Show();
+        }
         private void frmMain_Load(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = "Username: " + username;
-            toolStripStatusLabel2.Text = "User type: " + usertype;
+            toolStripStatusLabel2.Text = "User Type: " + usertype;
 
             if (usertype == "BRANCH ADMINISTRATOR")
             {

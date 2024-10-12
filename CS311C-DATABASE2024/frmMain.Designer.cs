@@ -30,13 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menu = new System.Windows.Forms.PictureBox();
+            this.menutransition = new System.Windows.Forms.Timer(this.components);
+            this.sidebartimer = new System.Windows.Forms.Timer(this.components);
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.menucontainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,9 +56,9 @@
             this.btnreports = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnlogout = new System.Windows.Forms.Button();
-            this.menutransition = new System.Windows.Forms.Timer(this.components);
-            this.sidebartimer = new System.Windows.Forms.Timer(this.components);
-            this.statusStrip1.SuspendLayout();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
@@ -74,57 +73,25 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 622);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1533, 24);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(158, 19);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripStatusLabel2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.White;
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(158, 19);
-            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.menu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1533, 45);
+            this.panel1.Size = new System.Drawing.Size(1736, 45);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.arellano_university_logo_D0C35BB9A2_seeklogo_com;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(76, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 31);
             this.pictureBox1.TabIndex = 2;
@@ -135,7 +102,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(115, 13);
+            this.label1.Location = new System.Drawing.Point(51, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(408, 19);
             this.label1.TabIndex = 1;
@@ -145,16 +112,28 @@
             // 
             this.menu.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.icons8_menu_bar_30;
             this.menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.menu.Location = new System.Drawing.Point(12, 7);
+            this.menu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menu.Location = new System.Drawing.Point(3, 13);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(33, 31);
+            this.menu.Size = new System.Drawing.Size(68, 31);
             this.menu.TabIndex = 1;
             this.menu.TabStop = false;
             this.menu.Click += new System.EventHandler(this.menu_Click);
             // 
+            // menutransition
+            // 
+            this.menutransition.Interval = 10;
+            this.menutransition.Tick += new System.EventHandler(this.menutransition_Tick);
+            // 
+            // sidebartimer
+            // 
+            this.sidebartimer.Interval = 10;
+            this.sidebartimer.Tick += new System.EventHandler(this.sidebartimer_Tick);
+            // 
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.sidebar.Controls.Add(this.menu);
             this.sidebar.Controls.Add(this.menucontainer);
             this.sidebar.Controls.Add(this.panel8);
             this.sidebar.Controls.Add(this.panel9);
@@ -162,9 +141,9 @@
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 45);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.sidebar.Size = new System.Drawing.Size(214, 577);
-            this.sidebar.TabIndex = 6;
+            this.sidebar.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.sidebar.Size = new System.Drawing.Size(214, 734);
+            this.sidebar.TabIndex = 9;
             // 
             // menucontainer
             // 
@@ -175,7 +154,7 @@
             this.menucontainer.Controls.Add(this.panel6);
             this.menucontainer.Controls.Add(this.panel5);
             this.menucontainer.Controls.Add(this.panel7);
-            this.menucontainer.Location = new System.Drawing.Point(3, 33);
+            this.menucontainer.Location = new System.Drawing.Point(3, 50);
             this.menucontainer.Name = "menucontainer";
             this.menucontainer.Size = new System.Drawing.Size(211, 60);
             this.menucontainer.TabIndex = 4;
@@ -206,7 +185,7 @@
             this.btnMaintenance.Text = "            Maintenance";
             this.btnMaintenance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMaintenance.UseVisualStyleBackColor = false;
-            this.btnMaintenance.Click += new System.EventHandler(this.btnMaintenance_Click);
+            this.btnMaintenance.Click += new System.EventHandler(this.btnMaintenance_Click_1);
             // 
             // panel3
             // 
@@ -234,7 +213,7 @@
             this.btnaccount.Text = "            Accounts";
             this.btnaccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnaccount.UseVisualStyleBackColor = false;
-            this.btnaccount.Click += new System.EventHandler(this.btnaccount_Click);
+            this.btnaccount.Click += new System.EventHandler(this.btnaccount_Click_1);
             // 
             // panel4
             // 
@@ -262,7 +241,7 @@
             this.btnstudents.Text = "            Students";
             this.btnstudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnstudents.UseVisualStyleBackColor = false;
-            this.btnstudents.Click += new System.EventHandler(this.btnstudents_Click);
+            this.btnstudents.Click += new System.EventHandler(this.btnstudents_Click_1);
             // 
             // panel6
             // 
@@ -290,7 +269,7 @@
             this.btnstrand.Text = "            Strand";
             this.btnstrand.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnstrand.UseVisualStyleBackColor = false;
-            this.btnstrand.Click += new System.EventHandler(this.btnstrand_Click);
+            this.btnstrand.Click += new System.EventHandler(this.btnstrand_Click_1);
             // 
             // panel5
             // 
@@ -318,7 +297,7 @@
             this.btncourse.Text = "            Course";
             this.btncourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncourse.UseVisualStyleBackColor = false;
-            this.btncourse.Click += new System.EventHandler(this.btncourse_Click);
+            this.btncourse.Click += new System.EventHandler(this.btncourse_Click_1);
             // 
             // panel7
             // 
@@ -346,12 +325,12 @@
             this.btnviolation.Text = "            Violations";
             this.btnviolation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnviolation.UseVisualStyleBackColor = false;
-            this.btnviolation.Click += new System.EventHandler(this.btnviolation_Click);
+            this.btnviolation.Click += new System.EventHandler(this.btnviolation_Click_1);
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.btnabout);
-            this.panel8.Location = new System.Drawing.Point(3, 99);
+            this.panel8.Location = new System.Drawing.Point(3, 116);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(211, 51);
             this.panel8.TabIndex = 4;
@@ -378,7 +357,7 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.btnreports);
-            this.panel9.Location = new System.Drawing.Point(3, 156);
+            this.panel9.Location = new System.Drawing.Point(3, 173);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(211, 51);
             this.panel9.TabIndex = 5;
@@ -405,7 +384,7 @@
             // panel10
             // 
             this.panel10.Controls.Add(this.btnlogout);
-            this.panel10.Location = new System.Drawing.Point(3, 213);
+            this.panel10.Location = new System.Drawing.Point(3, 230);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(211, 51);
             this.panel10.TabIndex = 6;
@@ -428,17 +407,34 @@
             this.btnlogout.Text = "            Logout";
             this.btnlogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnlogout.UseVisualStyleBackColor = false;
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click_1);
             // 
-            // menutransition
+            // statusStrip1
             // 
-            this.menutransition.Interval = 10;
-            this.menutransition.Tick += new System.EventHandler(this.menutransition_Tick);
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.statusStrip1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(214, 756);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1522, 23);
+            this.statusStrip1.TabIndex = 11;
+            this.statusStrip1.Text = "statusStrip1";
             // 
-            // sidebartimer
+            // toolStripStatusLabel1
             // 
-            this.sidebartimer.Interval = 10;
-            this.sidebartimer.Tick += new System.EventHandler(this.sidebartimer_Tick);
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(141, 18);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.White;
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(141, 18);
+            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
             // 
             // frmMain
             // 
@@ -447,10 +443,10 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1533, 646);
+            this.ClientSize = new System.Drawing.Size(1736, 779);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.statusStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -460,8 +456,6 @@
             this.Text = "Incident Report Management System - Main Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -477,19 +471,20 @@
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox menu;
+        private System.Windows.Forms.Timer menutransition;
+        private System.Windows.Forms.Timer sidebartimer;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.FlowLayoutPanel menucontainer;
         private System.Windows.Forms.Panel panel2;
@@ -500,17 +495,18 @@
         private System.Windows.Forms.Button btnstudents;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnstrand;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnviolation;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btncourse;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnviolation;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnabout;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnreports;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnlogout;
-        private System.Windows.Forms.Timer menutransition;
-        private System.Windows.Forms.Timer sidebartimer;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }
