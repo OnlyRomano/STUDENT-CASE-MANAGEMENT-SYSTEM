@@ -128,14 +128,23 @@ namespace CS311C_DATABASE2024
             toolStripStatusLabel1.Text = "Username: " + username;
             toolStripStatusLabel2.Text = "User Type: " + usertype;
 
-            if (usertype == "BRANCH ADMINISTRATOR")
+            if (usertype == "ADMINISTRATOR")
             {
-                btnaccount.Hide();
+                btnaccount.Visible = true;
+                btnstudents.Visible = true;
+                btnviolation.Visible = true;
             }
-            if (usertype == "STAFF")
+            else if (usertype == "BRANCH ADMINISTRATOR")
             {
-                btnaccount.Hide();
-                btnstudents.Hide();
+                btnaccount.Visible = false;
+                btnstudents.Visible = true;
+                btnviolation.Visible = true;
+            }
+            else
+            {
+                btnaccount.Visible = false;
+                btnstudents.Visible = false;
+                btnviolation.Visible = true;
             }
         }
     }
