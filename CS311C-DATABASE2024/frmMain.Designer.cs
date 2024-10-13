@@ -33,10 +33,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.menu = new System.Windows.Forms.PictureBox();
             this.menutransition = new System.Windows.Forms.Timer(this.components);
             this.sidebartimer = new System.Windows.Forms.Timer(this.components);
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnmenu = new System.Windows.Forms.Button();
             this.menucontainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMaintenance = new System.Windows.Forms.Button();
@@ -50,10 +51,10 @@
             this.btncourse = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnviolation = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnabout = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnreports = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnabout = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnlogout = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -61,8 +62,8 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             this.sidebar.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.menucontainer.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,8 +71,8 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -108,18 +109,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Arellano University Incident Report Management System";
             // 
-            // menu
-            // 
-            this.menu.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.icons8_menu_bar_30;
-            this.menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menu.Location = new System.Drawing.Point(3, 13);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(68, 31);
-            this.menu.TabIndex = 1;
-            this.menu.TabStop = false;
-            this.menu.Click += new System.EventHandler(this.menu_Click);
-            // 
             // menutransition
             // 
             this.menutransition.Interval = 10;
@@ -133,10 +122,10 @@
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
-            this.sidebar.Controls.Add(this.menu);
+            this.sidebar.Controls.Add(this.panel11);
             this.sidebar.Controls.Add(this.menucontainer);
-            this.sidebar.Controls.Add(this.panel8);
             this.sidebar.Controls.Add(this.panel9);
+            this.sidebar.Controls.Add(this.panel8);
             this.sidebar.Controls.Add(this.panel10);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 45);
@@ -144,7 +133,34 @@
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.sidebar.Size = new System.Drawing.Size(214, 734);
             this.sidebar.TabIndex = 9;
-            this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.btnmenu);
+            this.panel11.Location = new System.Drawing.Point(3, 13);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(211, 51);
+            this.panel11.TabIndex = 7;
+            // 
+            // btnmenu
+            // 
+            this.btnmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.btnmenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnmenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
+            this.btnmenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmenu.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenu.ForeColor = System.Drawing.Color.White;
+            this.btnmenu.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_menu_bar_30;
+            this.btnmenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmenu.Location = new System.Drawing.Point(-14, -10);
+            this.btnmenu.Name = "btnmenu";
+            this.btnmenu.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnmenu.Size = new System.Drawing.Size(257, 68);
+            this.btnmenu.TabIndex = 2;
+            this.btnmenu.Text = "            Menu";
+            this.btnmenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmenu.UseVisualStyleBackColor = false;
+            this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
             // 
             // menucontainer
             // 
@@ -155,7 +171,7 @@
             this.menucontainer.Controls.Add(this.panel6);
             this.menucontainer.Controls.Add(this.panel5);
             this.menucontainer.Controls.Add(this.panel7);
-            this.menucontainer.Location = new System.Drawing.Point(3, 50);
+            this.menucontainer.Location = new System.Drawing.Point(3, 70);
             this.menucontainer.Name = "menucontainer";
             this.menucontainer.Size = new System.Drawing.Size(211, 60);
             this.menucontainer.TabIndex = 4;
@@ -328,10 +344,38 @@
             this.btnviolation.UseVisualStyleBackColor = false;
             this.btnviolation.Click += new System.EventHandler(this.btnviolation_Click_1);
             // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.btnreports);
+            this.panel9.Location = new System.Drawing.Point(3, 136);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(211, 51);
+            this.panel9.TabIndex = 5;
+            // 
+            // btnreports
+            // 
+            this.btnreports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.btnreports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnreports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
+            this.btnreports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreports.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreports.ForeColor = System.Drawing.Color.White;
+            this.btnreports.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_report_30;
+            this.btnreports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnreports.Location = new System.Drawing.Point(-14, -10);
+            this.btnreports.Name = "btnreports";
+            this.btnreports.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnreports.Size = new System.Drawing.Size(257, 68);
+            this.btnreports.TabIndex = 2;
+            this.btnreports.Text = "            Reports";
+            this.btnreports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnreports.UseVisualStyleBackColor = false;
+            this.btnreports.Click += new System.EventHandler(this.btnreports_Click);
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.btnabout);
-            this.panel8.Location = new System.Drawing.Point(3, 116);
+            this.panel8.Location = new System.Drawing.Point(3, 193);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(211, 51);
             this.panel8.TabIndex = 4;
@@ -355,37 +399,10 @@
             this.btnabout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnabout.UseVisualStyleBackColor = false;
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.btnreports);
-            this.panel9.Location = new System.Drawing.Point(3, 173);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(211, 51);
-            this.panel9.TabIndex = 5;
-            // 
-            // btnreports
-            // 
-            this.btnreports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
-            this.btnreports.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnreports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
-            this.btnreports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnreports.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreports.ForeColor = System.Drawing.Color.White;
-            this.btnreports.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_report_30;
-            this.btnreports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnreports.Location = new System.Drawing.Point(-14, -10);
-            this.btnreports.Name = "btnreports";
-            this.btnreports.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnreports.Size = new System.Drawing.Size(257, 68);
-            this.btnreports.TabIndex = 2;
-            this.btnreports.Text = "            Reports";
-            this.btnreports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnreports.UseVisualStyleBackColor = false;
-            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.btnlogout);
-            this.panel10.Location = new System.Drawing.Point(3, 230);
+            this.panel10.Location = new System.Drawing.Point(3, 250);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(211, 51);
             this.panel10.TabIndex = 6;
@@ -460,8 +477,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
             this.sidebar.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             this.menucontainer.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -469,8 +486,8 @@
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -483,10 +500,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox menu;
         private System.Windows.Forms.Timer menutransition;
         private System.Windows.Forms.Timer sidebartimer;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button btnmenu;
         private System.Windows.Forms.FlowLayoutPanel menucontainer;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnMaintenance;
@@ -500,14 +521,11 @@
         private System.Windows.Forms.Button btncourse;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnviolation;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button btnabout;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnreports;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnabout;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnlogout;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }

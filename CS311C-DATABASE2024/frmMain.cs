@@ -65,10 +65,6 @@ namespace CS311C_DATABASE2024
                 }
             }
         }
-        private void menu_Click(object sender, EventArgs e)
-        {
-            sidebartimer.Start();
-        }
 
         private void btnMaintenance_Click_1(object sender, EventArgs e)
         {
@@ -117,7 +113,12 @@ namespace CS311C_DATABASE2024
             violationfrm.Show();
         }
 
-        private void sidebar_Paint(object sender, PaintEventArgs e)
+        private void btnmenu_Click(object sender, EventArgs e)
+        {
+            sidebartimer.Start();
+        }
+
+        private void btnreports_Click(object sender, EventArgs e)
         {
 
         }
