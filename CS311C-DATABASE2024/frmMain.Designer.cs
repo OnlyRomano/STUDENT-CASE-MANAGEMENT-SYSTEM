@@ -85,27 +85,27 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1736, 45);
+            this.panel1.Size = new System.Drawing.Size(1736, 52);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.arellano_university_logo_D0C35BB9A2_seeklogo_com;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(44, 45);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(60, 14);
+            this.label1.Location = new System.Drawing.Point(62, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(408, 19);
+            this.label1.Size = new System.Drawing.Size(429, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Arellano University Incident Report Management System";
             // 
@@ -128,10 +128,10 @@
             this.sidebar.Controls.Add(this.panel8);
             this.sidebar.Controls.Add(this.panel10);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidebar.Location = new System.Drawing.Point(0, 45);
+            this.sidebar.Location = new System.Drawing.Point(0, 52);
             this.sidebar.Name = "sidebar";
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.sidebar.Size = new System.Drawing.Size(214, 734);
+            this.sidebar.Size = new System.Drawing.Size(214, 727);
             this.sidebar.TabIndex = 9;
             // 
             // panel11

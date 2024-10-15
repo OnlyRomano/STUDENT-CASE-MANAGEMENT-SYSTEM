@@ -39,6 +39,16 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middlenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strandcourseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdbyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datecreatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblstudentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cs311c2024DataSet3 = new CS311C_DATABASE2024.cs311c2024DataSet3();
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,26 +58,16 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.exit = new System.Windows.Forms.PictureBox();
-            this.cs311c2024DataSet3 = new CS311C_DATABASE2024.cs311c2024DataSet3();
-            this.tblstudentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblstudentsTableAdapter = new CS311C_DATABASE2024.cs311c2024DataSet3TableAdapters.tblstudentsTableAdapter();
-            this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middlenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.levelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strandcourseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdbyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datecreatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblstudentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cs311c2024DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cs311c2024DataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblstudentsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRefresh
@@ -85,7 +85,8 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(172, 40);
             this.btnRefresh.TabIndex = 13;
-            this.btnRefresh.Text = "&Refresh";
+            this.btnRefresh.Text = "             &Refresh";
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -104,7 +105,8 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(172, 40);
             this.btnDelete.TabIndex = 12;
-            this.btnDelete.Text = "&Delete";
+            this.btnDelete.Text = "             &Delete";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -124,7 +126,8 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(172, 40);
             this.btnUpdate.TabIndex = 11;
-            this.btnUpdate.Text = "&Update";
+            this.btnUpdate.Text = "             &Update";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -144,7 +147,8 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(172, 40);
             this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "&Add";
+            this.btnAdd.Text = "             &Add";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -211,6 +215,66 @@
             this.dataGridView1.Size = new System.Drawing.Size(1146, 450);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // studentIDDataGridViewTextBoxColumn
+            // 
+            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "studentID";
+            this.studentIDDataGridViewTextBoxColumn.HeaderText = "studentID";
+            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "lastname";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "lastname";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            // 
+            // middlenameDataGridViewTextBoxColumn
+            // 
+            this.middlenameDataGridViewTextBoxColumn.DataPropertyName = "middlename";
+            this.middlenameDataGridViewTextBoxColumn.HeaderText = "middlename";
+            this.middlenameDataGridViewTextBoxColumn.Name = "middlenameDataGridViewTextBoxColumn";
+            // 
+            // levelDataGridViewTextBoxColumn
+            // 
+            this.levelDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.levelDataGridViewTextBoxColumn.DataPropertyName = "level";
+            this.levelDataGridViewTextBoxColumn.HeaderText = "level";
+            this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
+            this.levelDataGridViewTextBoxColumn.Width = 64;
+            // 
+            // strandcourseDataGridViewTextBoxColumn
+            // 
+            this.strandcourseDataGridViewTextBoxColumn.DataPropertyName = "strand_course";
+            this.strandcourseDataGridViewTextBoxColumn.HeaderText = "strand_course";
+            this.strandcourseDataGridViewTextBoxColumn.Name = "strandcourseDataGridViewTextBoxColumn";
+            // 
+            // createdbyDataGridViewTextBoxColumn
+            // 
+            this.createdbyDataGridViewTextBoxColumn.DataPropertyName = "createdby";
+            this.createdbyDataGridViewTextBoxColumn.HeaderText = "createdby";
+            this.createdbyDataGridViewTextBoxColumn.Name = "createdbyDataGridViewTextBoxColumn";
+            // 
+            // datecreatedDataGridViewTextBoxColumn
+            // 
+            this.datecreatedDataGridViewTextBoxColumn.DataPropertyName = "datecreated";
+            this.datecreatedDataGridViewTextBoxColumn.HeaderText = "datecreated";
+            this.datecreatedDataGridViewTextBoxColumn.Name = "datecreatedDataGridViewTextBoxColumn";
+            // 
+            // tblstudentsBindingSource
+            // 
+            this.tblstudentsBindingSource.DataMember = "tblstudents";
+            this.tblstudentsBindingSource.DataSource = this.cs311c2024DataSet3;
+            // 
+            // cs311c2024DataSet3
+            // 
+            this.cs311c2024DataSet3.DataSetName = "cs311c2024DataSet3";
+            this.cs311c2024DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtsearch
             // 
@@ -319,75 +383,15 @@
             this.exit.TabStop = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // cs311c2024DataSet3
-            // 
-            this.cs311c2024DataSet3.DataSetName = "cs311c2024DataSet3";
-            this.cs311c2024DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblstudentsBindingSource
-            // 
-            this.tblstudentsBindingSource.DataMember = "tblstudents";
-            this.tblstudentsBindingSource.DataSource = this.cs311c2024DataSet3;
-            // 
             // tblstudentsTableAdapter
             // 
             this.tblstudentsTableAdapter.ClearBeforeFill = true;
-            // 
-            // studentIDDataGridViewTextBoxColumn
-            // 
-            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "studentID";
-            this.studentIDDataGridViewTextBoxColumn.HeaderText = "studentID";
-            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
-            // 
-            // lastnameDataGridViewTextBoxColumn
-            // 
-            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "lastname";
-            this.lastnameDataGridViewTextBoxColumn.HeaderText = "lastname";
-            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
-            // 
-            // firstnameDataGridViewTextBoxColumn
-            // 
-            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
-            this.firstnameDataGridViewTextBoxColumn.HeaderText = "firstname";
-            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
-            // 
-            // middlenameDataGridViewTextBoxColumn
-            // 
-            this.middlenameDataGridViewTextBoxColumn.DataPropertyName = "middlename";
-            this.middlenameDataGridViewTextBoxColumn.HeaderText = "middlename";
-            this.middlenameDataGridViewTextBoxColumn.Name = "middlenameDataGridViewTextBoxColumn";
-            // 
-            // levelDataGridViewTextBoxColumn
-            // 
-            this.levelDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.levelDataGridViewTextBoxColumn.DataPropertyName = "level";
-            this.levelDataGridViewTextBoxColumn.HeaderText = "level";
-            this.levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
-            this.levelDataGridViewTextBoxColumn.Width = 64;
-            // 
-            // strandcourseDataGridViewTextBoxColumn
-            // 
-            this.strandcourseDataGridViewTextBoxColumn.DataPropertyName = "strand_course";
-            this.strandcourseDataGridViewTextBoxColumn.HeaderText = "strand_course";
-            this.strandcourseDataGridViewTextBoxColumn.Name = "strandcourseDataGridViewTextBoxColumn";
-            // 
-            // createdbyDataGridViewTextBoxColumn
-            // 
-            this.createdbyDataGridViewTextBoxColumn.DataPropertyName = "createdby";
-            this.createdbyDataGridViewTextBoxColumn.HeaderText = "createdby";
-            this.createdbyDataGridViewTextBoxColumn.Name = "createdbyDataGridViewTextBoxColumn";
-            // 
-            // datecreatedDataGridViewTextBoxColumn
-            // 
-            this.datecreatedDataGridViewTextBoxColumn.DataPropertyName = "datecreated";
-            this.datecreatedDataGridViewTextBoxColumn.HeaderText = "datecreated";
-            this.datecreatedDataGridViewTextBoxColumn.Name = "datecreatedDataGridViewTextBoxColumn";
             // 
             // frmStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.Green_and_Blue_Modern_Virtual_Event_Background;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1417, 541);
             this.Controls.Add(this.panel2);
@@ -404,6 +408,8 @@
             this.Text = "Students Management";
             this.Load += new System.EventHandler(this.frmStudents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblstudentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cs311c2024DataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -411,8 +417,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cs311c2024DataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblstudentsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
