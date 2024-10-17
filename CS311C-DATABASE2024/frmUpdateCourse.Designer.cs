@@ -187,7 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.Green_and_Blue_Modern_Virtual_Event_Background;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(409, 337);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClear);

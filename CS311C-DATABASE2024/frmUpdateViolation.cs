@@ -22,15 +22,16 @@ namespace CS311C_DATABASE2024
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HTCAPTION = 0x2;
 
-        private string username, editcode, editdescription, editstatus;
+        private string username, editcode, editdescription, edittype, editstatus;
         private int errorcount;
 
         Class1 updateViolation = new Class1("127.0.0.1", "cs311c2024", "jhunmark", "romano");
-        public frmUpdateViolation(string editcode, string editdescription, string editstatus, string username)
+        public frmUpdateViolation(string editcode, string editdescription,string edittype, string editstatus, string username)
         {
             InitializeComponent();
             this.editcode = editcode;
             this.editdescription = editdescription;
+            this.edittype = edittype;
             this.editstatus = editstatus;
             this.username = username;
             panel1.MouseDown += new MouseEventHandler(Form_MouseDown);
@@ -40,6 +41,15 @@ namespace CS311C_DATABASE2024
         {
             txtcode.Text = editcode;
             txtdescription.Text = editdescription;
+
+            if (edittype == "MINOR OFFENSE")
+            {
+                cmbtype.SelectedIndex = 0;
+            }
+            else
+            {
+                cmbtype.SelectedIndex = 1;
+            }
 
             if (editstatus == "ACTIVE")
             {
@@ -61,6 +71,7 @@ namespace CS311C_DATABASE2024
             txtdescription.Clear();
             errorProvider1.Clear();
             cmbstatus.SelectedIndex = -1;
+            cmbtype.SelectedIndex = -1;
             txtdescription.Focus();
         }
 
@@ -83,6 +94,11 @@ namespace CS311C_DATABASE2024
                 errorProvider1.SetError(txtdescription, "Description is empty");
                 errorcount++;
             }
+            if (cmbtype.SelectedIndex < 0)
+            {
+                errorProvider1.SetError(cmbtype, "Select Violation Type");
+                errorcount++;
+            }
             if (cmbstatus.SelectedIndex < 0)
             {
                 errorProvider1.SetError(cmbstatus, "Select Status");
@@ -101,7 +117,7 @@ namespace CS311C_DATABASE2024
                 {
                     try
                     {
-                        updateViolation.executeSQL("UPDATE tblviolation SET code = '" + txtcode.Text + "', description = '" + txtdescription.Text + "', status = '" + cmbstatus.Text.ToUpper()
+                        updateViolation.executeSQL("UPDATE tblviolation SET code = '" + txtcode.Text + "', description = '" + txtdescription.Text + "', violation_type = '" + cmbtype.Text.ToUpper() + "', status = '" + cmbstatus.Text.ToUpper()
                             + "' WHERE code = '" + txtcode.Text + "'");
                         if (updateViolation.rowAffected > 0)
                         {

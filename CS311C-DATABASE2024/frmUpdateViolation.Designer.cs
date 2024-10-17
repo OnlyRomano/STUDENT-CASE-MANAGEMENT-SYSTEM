@@ -43,6 +43,8 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.cmbstatus = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbtype = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -106,7 +108,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(196, 278);
+            this.btnClear.Location = new System.Drawing.Point(195, 310);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(70, 35);
@@ -123,7 +125,7 @@
             this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsave.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsave.ForeColor = System.Drawing.Color.White;
-            this.btnsave.Location = new System.Drawing.Point(122, 278);
+            this.btnsave.Location = new System.Drawing.Point(121, 310);
             this.btnsave.Margin = new System.Windows.Forms.Padding(2);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(70, 35);
@@ -185,7 +187,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(59, 254);
+            this.label3.Location = new System.Drawing.Point(58, 286);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 19);
             this.label3.TabIndex = 51;
@@ -200,18 +202,46 @@
             this.cmbstatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.cmbstatus.Location = new System.Drawing.Point(122, 247);
+            this.cmbstatus.Location = new System.Drawing.Point(121, 279);
             this.cmbstatus.Name = "cmbstatus";
             this.cmbstatus.Size = new System.Drawing.Size(228, 26);
             this.cmbstatus.TabIndex = 52;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(66, 254);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 19);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Type:";
+            // 
+            // cmbtype
+            // 
+            this.cmbtype.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbtype.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbtype.FormattingEnabled = true;
+            this.cmbtype.Items.AddRange(new object[] {
+            "Minor offense",
+            "Major offense"});
+            this.cmbtype.Location = new System.Drawing.Point(122, 247);
+            this.cmbtype.Name = "cmbtype";
+            this.cmbtype.Size = new System.Drawing.Size(227, 26);
+            this.cmbtype.TabIndex = 55;
             // 
             // frmUpdateViolation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.Green_and_Blue_Modern_Virtual_Event_Background;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(409, 337);
+            this.ClientSize = new System.Drawing.Size(409, 367);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cmbtype);
             this.Controls.Add(this.cmbstatus);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnClear);
@@ -253,5 +283,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ComboBox cmbstatus;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbtype;
     }
 }

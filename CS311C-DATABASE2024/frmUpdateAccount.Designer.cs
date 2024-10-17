@@ -60,7 +60,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(223, 223);
+            this.btnClear.Location = new System.Drawing.Point(221, 250);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(70, 35);
@@ -77,7 +77,7 @@
             this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsave.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsave.ForeColor = System.Drawing.Color.White;
-            this.btnsave.Location = new System.Drawing.Point(149, 223);
+            this.btnsave.Location = new System.Drawing.Point(147, 250);
             this.btnsave.Margin = new System.Windows.Forms.Padding(2);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(70, 35);
@@ -96,7 +96,7 @@
             "Administrator",
             "Branch Administrator",
             "Staff"});
-            this.cmbusertype.Location = new System.Drawing.Point(149, 163);
+            this.cmbusertype.Location = new System.Drawing.Point(147, 190);
             this.cmbusertype.Margin = new System.Windows.Forms.Padding(2);
             this.cmbusertype.Name = "cmbusertype";
             this.cmbusertype.Size = new System.Drawing.Size(174, 26);
@@ -108,7 +108,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(68, 170);
+            this.label1.Location = new System.Drawing.Point(66, 197);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 19);
@@ -122,7 +122,7 @@
             this.cbshow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbshow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbshow.ForeColor = System.Drawing.Color.White;
-            this.cbshow.Location = new System.Drawing.Point(184, 136);
+            this.cbshow.Location = new System.Drawing.Point(182, 163);
             this.cbshow.Margin = new System.Windows.Forms.Padding(2);
             this.cbshow.Name = "cbshow";
             this.cbshow.Size = new System.Drawing.Size(139, 23);
@@ -134,7 +134,7 @@
             // txtpassword
             // 
             this.txtpassword.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.Location = new System.Drawing.Point(149, 109);
+            this.txtpassword.Location = new System.Drawing.Point(147, 136);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
@@ -146,7 +146,7 @@
             // 
             this.txtusername.Enabled = false;
             this.txtusername.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusername.Location = new System.Drawing.Point(149, 82);
+            this.txtusername.Location = new System.Drawing.Point(147, 109);
             this.txtusername.Margin = new System.Windows.Forms.Padding(2);
             this.txtusername.Multiline = true;
             this.txtusername.Name = "txtusername";
@@ -159,7 +159,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(63, 113);
+            this.label3.Location = new System.Drawing.Point(61, 140);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 19);
@@ -172,7 +172,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(59, 86);
+            this.label4.Location = new System.Drawing.Point(57, 113);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 19);
@@ -185,7 +185,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(87, 200);
+            this.label2.Location = new System.Drawing.Point(85, 227);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 19);
@@ -201,7 +201,7 @@
             this.cmbstatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.cmbstatus.Location = new System.Drawing.Point(149, 193);
+            this.cmbstatus.Location = new System.Drawing.Point(147, 220);
             this.cmbstatus.Margin = new System.Windows.Forms.Padding(2);
             this.cmbstatus.Name = "cmbstatus";
             this.cmbstatus.Size = new System.Drawing.Size(174, 26);
@@ -264,8 +264,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.Green_and_Blue_Modern_Virtual_Event_Background;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(409, 337);
             this.Controls.Add(this.panel1);

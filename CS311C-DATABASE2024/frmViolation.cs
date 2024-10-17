@@ -44,11 +44,11 @@ namespace CS311C_DATABASE2024
 
         private void frmViolation_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cs311c2024DataSet4.tblviolation' table. You can move, or remove it, as needed.
-            this.tblviolationTableAdapter.Fill(this.cs311c2024DataSet4.tblviolation);
+            // TODO: This line of code loads data into the 'cs311c2024DataSet6.tblviolation' table. You can move, or remove it, as needed.
+            this.tblviolationTableAdapter.Fill(this.cs311c2024DataSet6.tblviolation);
             try
             {
-                DataTable dt = violation.GetData("SELECT code, description, status, createdby, datecreated FROM tblviolation WHERE code <> '" + username + "' ORDER BY code");
+                DataTable dt = violation.GetData("SELECT code, description, violation_type, status, createdby, datecreated FROM tblviolation WHERE code <> '" + username + "' ORDER BY code");
                 dataGridView1.DataSource = dt;
             }
             catch (Exception ex)
@@ -61,8 +61,8 @@ namespace CS311C_DATABASE2024
         {
             try
             {
-                DataTable dt = violation.GetData("SELECT code, description, status, createdby, datecreated FROM tblviolation WHERE code <> '" + username +
-                    "'AND (code LIKE '%" + txtsearch.Text + "%' OR description LIKE '%" + txtsearch.Text + "%') ORDER BY studentID");
+                DataTable dt = violation.GetData("SELECT code, description, violation_type, status, createdby, datecreated FROM tblviolation WHERE code <> '" + username +
+                    "'AND (code LIKE '%" + txtsearch.Text + "%' OR description LIKE '%" + txtsearch.Text + "%' OR violation_type LIKE '%" + txtsearch.Text + "%') ORDER BY code");
 
                 dataGridView1.DataSource = dt;
             }
@@ -82,9 +82,10 @@ namespace CS311C_DATABASE2024
         {
             string editcode = dataGridView1.Rows[row].Cells[0].Value.ToString();
             string editdescription = dataGridView1.Rows[row].Cells[1].Value.ToString();
-            string editstatus = dataGridView1.Rows[row].Cells[2].Value.ToString();
+            string edittype = dataGridView1.Rows[row].Cells[2].Value.ToString();
+            string editstatus = dataGridView1.Rows[row].Cells[3].Value.ToString();
 
-            frmUpdateViolation updateViolation = new frmUpdateViolation(editcode, editdescription, editstatus, username);
+            frmUpdateViolation updateViolation = new frmUpdateViolation(editcode, editdescription, edittype, editstatus, username);
             updateViolation.Show();
         }
 
@@ -123,7 +124,7 @@ namespace CS311C_DATABASE2024
                     if (violation.rowAffected > 0)
                     {
                         violation.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() +
-                            "', '" + DateTime.Now.ToShortTimeString() + "', 'Delete','Accounts Management', '" + selectedViolation + "', '" + username + "')");
+                            "', '" + DateTime.Now.ToShortTimeString() + "', 'Delete','Violation Management', '" + selectedViolation + "', '" + username + "')");
                         MessageBox.Show("Violation Deleted", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }

@@ -115,6 +115,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cs311c2024DataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cs311c2024DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cs311c2024DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +350,28 @@
     <None Include="cs311c2024DataSet4.xss">
       <DependentUpon>cs311c2024DataSet4.xsd</DependentUpon>
     </None>
+    <None Include="cs311c2024DataSet5.xsc">
+      <DependentUpon>cs311c2024DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet5.xss">
+      <DependentUpon>cs311c2024DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet6.xsc">
+      <DependentUpon>cs311c2024DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet6.xss">
+      <DependentUpon>cs311c2024DataSet6.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -406,6 +438,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="arellano_university_logo_au_freelogovectors.net_-400x400.ico" />
+    <None Include="Resources\icons8-clear-20.png" />
+    <None Include="Resources\icons8-save-20.png" />
+    <None Include="Resources\icons8-save-15.png" />
+    <None Include="Resources\icons8-clear-30.png" />
+    <None Include="Resources\icons8-save-30.png" />
     <None Include="Resources\icons8-menu-bar-30.png" />
     <None Include="Resources\icons8-logout-30.png" />
     <None Include="Resources\icons8-report-30.png" />

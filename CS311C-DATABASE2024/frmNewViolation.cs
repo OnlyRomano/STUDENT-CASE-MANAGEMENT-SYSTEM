@@ -58,6 +58,11 @@ namespace CS311C_DATABASE2024
                 errorProvider1.SetError(txtdescription, "Description is empty");
                 errorcount++;
             }
+            if (cmbtype.SelectedIndex < 0)
+            {
+                errorProvider1.SetError(cmbtype, "Select Violation Type");
+                errorcount++;
+            }
             try
             {
                 DataTable dt = newviolation.GetData("SELECT * FROM tblviolation WHERE code = '" + txtcode.Text + "'");
@@ -83,7 +88,7 @@ namespace CS311C_DATABASE2024
                 {
                     try
                     {
-                        newviolation.executeSQL("INSERT INTO tblviolation (code, description, status, createdby, datecreated) VALUES ('" + txtcode.Text + "', '" + txtdescription.Text + 
+                        newviolation.executeSQL("INSERT INTO tblviolation (code, description, violation_type, status, createdby, datecreated) VALUES ('" + txtcode.Text + "', '" + txtdescription.Text + "', '" + cmbtype.Text.ToUpper() +
                             "', 'ACTIVE', '" + code + "', '" + DateTime.Now.ToShortDateString() + "')");
                         if (newviolation.rowAffected > 0)
                         {
@@ -106,6 +111,7 @@ namespace CS311C_DATABASE2024
             txtcode.Clear();
             txtdescription.Clear();
             errorProvider1.Clear();
+            cmbtype.SelectedIndex = -1;
             txtcode.Focus();
         }
 
