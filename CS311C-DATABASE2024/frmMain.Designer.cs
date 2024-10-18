@@ -85,7 +85,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1736, 52);
+            this.panel1.Size = new System.Drawing.Size(1649, 52);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
@@ -131,7 +131,7 @@
             this.sidebar.Location = new System.Drawing.Point(0, 52);
             this.sidebar.Name = "sidebar";
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.sidebar.Size = new System.Drawing.Size(214, 727);
+            this.sidebar.Size = new System.Drawing.Size(214, 647);
             this.sidebar.TabIndex = 9;
             // 
             // panel11
@@ -404,7 +404,7 @@
             this.panel10.Controls.Add(this.btnlogout);
             this.panel10.Location = new System.Drawing.Point(3, 250);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(211, 51);
+            this.panel10.Size = new System.Drawing.Size(261, 51);
             this.panel10.TabIndex = 6;
             // 
             // btnlogout
@@ -434,9 +434,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(214, 756);
+            this.statusStrip1.Location = new System.Drawing.Point(214, 676);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1522, 23);
+            this.statusStrip1.Size = new System.Drawing.Size(1435, 23);
             this.statusStrip1.TabIndex = 11;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -461,7 +461,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1736, 779);
+            this.ClientSize = new System.Drawing.Size(1649, 699);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
