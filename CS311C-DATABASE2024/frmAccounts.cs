@@ -141,5 +141,10 @@ namespace CS311C_DATABASE2024
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -196,6 +196,7 @@
             this.Name = "frmNewCourse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Course";
+            this.Load += new System.EventHandler(this.frmNewCourse_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();

@@ -125,11 +125,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cs311c2024DataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cs311c2024DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cs311c2024DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAccounts.Designer.cs">
       <DependentUpon>frmAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCases.Designer.cs">
+      <DependentUpon>frmCases.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCourses.cs">
       <SubType>Form</SubType>
@@ -160,6 +176,12 @@
     </Compile>
     <Compile Include="frmNewAccount.Designer.cs">
       <DependentUpon>frmNewAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewcase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewcase.Designer.cs">
+      <DependentUpon>frmNewcase.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNewCourse.cs">
       <SubType>Form</SubType>
@@ -203,6 +225,12 @@
     <Compile Include="frmUpdateAccount.Designer.cs">
       <DependentUpon>frmUpdateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdatecase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdatecase.Designer.cs">
+      <DependentUpon>frmUpdatecase.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUpdateCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +266,9 @@
     <EmbeddedResource Include="frmAccounts.resx">
       <DependentUpon>frmAccounts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCases.resx">
+      <DependentUpon>frmCases.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCourses.resx">
       <DependentUpon>frmCourses.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewAccount.resx">
       <DependentUpon>frmNewAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewcase.resx">
+      <DependentUpon>frmNewcase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewCourse.resx">
       <DependentUpon>frmNewCourse.cs</DependentUpon>
@@ -273,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateAccount.resx">
       <DependentUpon>frmUpdateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdatecase.resx">
+      <DependentUpon>frmUpdatecase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateCourse.resx">
       <DependentUpon>frmUpdateCourse.cs</DependentUpon>
@@ -372,6 +409,28 @@
     <None Include="cs311c2024DataSet6.xss">
       <DependentUpon>cs311c2024DataSet6.xsd</DependentUpon>
     </None>
+    <None Include="cs311c2024DataSet7.xsc">
+      <DependentUpon>cs311c2024DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet7.xss">
+      <DependentUpon>cs311c2024DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet8.xsc">
+      <DependentUpon>cs311c2024DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet8.xss">
+      <DependentUpon>cs311c2024DataSet8.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -438,6 +497,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="arellano_university_logo_au_freelogovectors.net_-400x400.ico" />
+    <None Include="Resources\control_12058800.png" />
+    <None Include="Resources\folder_13339451.png" />
+    <None Include="Resources\folder1.png" />
+    <None Include="Resources\download.gif" />
+    <None Include="Resources\folder_1333945.png" />
+    <None Include="Resources\portfolio.png" />
+    <None Include="Resources\icons8-folder-30.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\icons8-clear-30 %281%29.png" />
+    <None Include="Resources\icons8-business-30.png" />
     <None Include="Resources\icons8-clear-20.png" />
     <None Include="Resources\icons8-save-20.png" />
     <None Include="Resources\icons8-save-15.png" />

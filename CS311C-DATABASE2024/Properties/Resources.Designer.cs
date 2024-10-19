@@ -93,6 +93,66 @@ namespace CS311C_DATABASE2024.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap control_12058800 {
+            get {
+                object obj = ResourceManager.GetObject("control_12058800", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folder {
+            get {
+                object obj = ResourceManager.GetObject("folder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folder_1333945 {
+            get {
+                object obj = ResourceManager.GetObject("folder_1333945", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folder_13339451 {
+            get {
+                object obj = ResourceManager.GetObject("folder_13339451", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folder1 {
+            get {
+                object obj = ResourceManager.GetObject("folder1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Green_and_Blue_Modern_Virtual_Event_Background {
             get {
                 object obj = ResourceManager.GetObject("Green and Blue Modern Virtual Event Background", resourceCulture);
@@ -143,6 +203,26 @@ namespace CS311C_DATABASE2024.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_business_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-business-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_clear_30__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-clear-30 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_course_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8_course_100", resourceCulture);
@@ -176,6 +256,16 @@ namespace CS311C_DATABASE2024.Properties {
         internal static System.Drawing.Bitmap icons8_edit_account_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8_edit_account_30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_folder_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-folder-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +446,16 @@ namespace CS311C_DATABASE2024.Properties {
         internal static System.Drawing.Bitmap new_account {
             get {
                 object obj = ResourceManager.GetObject("new_account", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap portfolio {
+            get {
+                object obj = ResourceManager.GetObject("portfolio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

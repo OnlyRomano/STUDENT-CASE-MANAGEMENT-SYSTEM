@@ -114,5 +114,10 @@ namespace CS311C_DATABASE2024
         {
             this.Close();
         }
+
+        private void frmNewCourse_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

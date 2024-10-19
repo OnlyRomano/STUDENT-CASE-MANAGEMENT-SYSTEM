@@ -129,6 +129,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1033, 41);
             this.panel2.TabIndex = 17;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // dataGridView1
             // 
@@ -256,7 +257,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.icons8_account_management_100;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(60, 173);
             this.pictureBox2.Name = "pictureBox2";

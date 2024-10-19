@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CS311_DATABASE_2024;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,7 +50,7 @@ namespace CS311C_DATABASE2024
             if (menuExpand == false)
             {
                 menucontainer.Height += 10;
-                if (menucontainer.Height >= 361)
+                if (menucontainer.Height >= 390)
                 {
                     menutransition.Stop();
                     menuExpand = true;
@@ -121,6 +122,13 @@ namespace CS311C_DATABASE2024
         private void btnreports_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btncase_Click(object sender, EventArgs e)
+        {
+            frmCases casefrm = new frmCases(username);
+            casefrm.MdiParent = this;
+            casefrm.Show();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
