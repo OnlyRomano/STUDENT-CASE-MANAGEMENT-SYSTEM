@@ -57,6 +57,7 @@
             this.exit = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,6 +66,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,7 +208,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 755);
             this.panel1.TabIndex = 74;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
@@ -218,7 +219,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 78;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -331,7 +331,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(220, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1308, 41);
+            this.panel2.Size = new System.Drawing.Size(1091, 41);
             this.panel2.TabIndex = 75;
             // 
             // exit
@@ -340,7 +340,7 @@
             this.exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit.BackgroundImage")));
             this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exit.Location = new System.Drawing.Point(1264, 5);
+            this.exit.Location = new System.Drawing.Point(1040, 5);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(32, 31);
             this.exit.TabIndex = 35;
@@ -349,8 +349,9 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.txtsearch);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label3);
@@ -363,22 +364,33 @@
             this.panel3.Controls.Add(this.txtmiddlename);
             this.panel3.Controls.Add(this.txtfirstname);
             this.panel3.Controls.Add(this.txtlastname);
-            this.panel3.Location = new System.Drawing.Point(638, 55);
+            this.panel3.Location = new System.Drawing.Point(525, 47);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(446, 299);
+            this.panel3.Size = new System.Drawing.Size(446, 325);
             this.panel3.TabIndex = 76;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(78, 19);
+            this.label2.Location = new System.Drawing.Point(147, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(317, 33);
+            this.label2.Size = new System.Drawing.Size(248, 25);
             this.label2.TabIndex = 74;
             this.label2.Text = "STUDENT INFORMATION";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.student_card;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(64, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(67, 67);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 74;
+            this.pictureBox4.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -387,7 +399,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -410,10 +422,11 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(235, 366);
+            this.dataGridView1.Location = new System.Drawing.Point(220, 377);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -422,7 +435,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1281, 378);
+            this.dataGridView1.Size = new System.Drawing.Size(1091, 378);
             this.dataGridView1.TabIndex = 77;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -433,7 +446,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.Green_and_Blue_Modern_Virtual_Event_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1528, 755);
+            this.ClientSize = new System.Drawing.Size(1311, 755);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -454,6 +467,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -486,5 +500,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

@@ -453,6 +453,16 @@ namespace CS311C_DATABASE2024.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap personal_information {
+            get {
+                object obj = ResourceManager.GetObject("personal-information", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap portfolio {
             get {
                 object obj = ResourceManager.GetObject("portfolio", resourceCulture);
@@ -476,6 +486,16 @@ namespace CS311C_DATABASE2024.Properties {
         internal static System.Drawing.Bitmap sidebar_2_48 {
             get {
                 object obj = ResourceManager.GetObject("sidebar-2-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap student_card {
+            get {
+                object obj = ResourceManager.GetObject("student-card", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

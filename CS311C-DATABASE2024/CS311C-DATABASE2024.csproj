@@ -100,6 +100,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cs311c2024DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cs311c2024DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cs311c2024DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cs311c2024DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -134,6 +144,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>cs311c2024DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cs311c2024DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cs311c2024DataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmAccounts.cs">
       <SubType>Form</SubType>
@@ -354,6 +369,28 @@
     <None Include="cs311c2024DataSet1.xss">
       <DependentUpon>cs311c2024DataSet1.xsd</DependentUpon>
     </None>
+    <None Include="cs311c2024DataSet10.xsc">
+      <DependentUpon>cs311c2024DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet10.xss">
+      <DependentUpon>cs311c2024DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet11.xsc">
+      <DependentUpon>cs311c2024DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet11.xss">
+      <DependentUpon>cs311c2024DataSet11.xsd</DependentUpon>
+    </None>
     <None Include="cs311c2024DataSet2.xsc">
       <DependentUpon>cs311c2024DataSet2.xsd</DependentUpon>
     </None>
@@ -431,6 +468,17 @@
     <None Include="cs311c2024DataSet8.xss">
       <DependentUpon>cs311c2024DataSet8.xsd</DependentUpon>
     </None>
+    <None Include="cs311c2024DataSet9.xsc">
+      <DependentUpon>cs311c2024DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="cs311c2024DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cs311c2024DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cs311c2024DataSet9.xss">
+      <DependentUpon>cs311c2024DataSet9.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -497,6 +545,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="arellano_university_logo_au_freelogovectors.net_-400x400.ico" />
+    <None Include="Resources\student-card.png" />
+    <None Include="Resources\personal-information.png" />
     <None Include="Resources\control_12058800.png" />
     <None Include="Resources\folder_13339451.png" />
     <None Include="Resources\folder1.png" />
