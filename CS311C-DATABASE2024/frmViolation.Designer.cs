@@ -121,7 +121,7 @@
             // txtsearch
             // 
             this.txtsearch.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsearch.Location = new System.Drawing.Point(271, 57);
+            this.txtsearch.Location = new System.Drawing.Point(281, 69);
             this.txtsearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(288, 26);
@@ -240,7 +240,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.icons8_search_18;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(243, 57);
+            this.pictureBox1.Location = new System.Drawing.Point(253, 68);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(23, 26);
             this.pictureBox1.TabIndex = 22;
@@ -275,7 +275,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(40, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(32, 8);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(150, 150);
             this.pictureBox3.TabIndex = 18;
