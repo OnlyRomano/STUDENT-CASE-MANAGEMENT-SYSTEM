@@ -545,6 +545,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="arellano_university_logo_au_freelogovectors.net_-400x400.ico" />
+    <None Include="Resources\account-manager.png" />
     <None Include="Resources\icons8-course-1002.png" />
     <None Include="Resources\icons8-classroom-100.png" />
     <None Include="Resources\icons8-course-1001.png" />

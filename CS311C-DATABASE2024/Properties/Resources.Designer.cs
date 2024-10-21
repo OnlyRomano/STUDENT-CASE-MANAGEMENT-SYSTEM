@@ -63,6 +63,16 @@ namespace CS311C_DATABASE2024.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account_manager {
+            get {
+                object obj = ResourceManager.GetObject("account-manager", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arellano_university_logo_D0C35BB9A2_seeklogo_com {
             get {
                 object obj = ResourceManager.GetObject("arellano-university-logo-D0C35BB9A2-seeklogo.com", resourceCulture);

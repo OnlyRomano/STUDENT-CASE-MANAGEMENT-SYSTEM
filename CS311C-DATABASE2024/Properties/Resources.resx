@@ -169,11 +169,11 @@
   <data name="control_12058800" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\control_12058800.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arellano-university-logo-D0C35BB9A2-seeklogo.com" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arellano-university-logo-D0C35BB9A2-seeklogo.com1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="profile_update" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile-update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-school-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-school-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_username_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-username-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +196,9 @@
   <data name="icons8_password_key_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-password-key-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_add_male_user_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-add-male-user-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-logout-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-logout-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,6 +220,9 @@
   <data name="icons8_refresh_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-refresh-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-course-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-course-1002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-password-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-password-301.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,11 +238,8 @@
   <data name="portfolio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\portfolio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-business-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-business-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_add_male_user_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-add-male-user-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arellano-university-logo-D0C35BB9A2-seeklogo.com" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arellano-university-logo-D0C35BB9A2-seeklogo.com1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="folder1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,8 +247,8 @@
   <data name="icons8_student_male_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-student-male-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-school-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-school-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-business-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-business-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_account_management_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-account-management-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,7 +256,7 @@
   <data name="student-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\student-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-course-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-course-1002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="account-manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\account-manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

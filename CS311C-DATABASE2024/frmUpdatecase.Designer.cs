@@ -162,7 +162,6 @@
             this.cmbviolationcount.Name = "cmbviolationcount";
             this.cmbviolationcount.Size = new System.Drawing.Size(180, 26);
             this.cmbviolationcount.TabIndex = 84;
-            this.cmbviolationcount.SelectedIndexChanged += new System.EventHandler(this.cmbviolationcount_SelectedIndexChanged);
             // 
             // txtviolationdescription
             // 
@@ -192,7 +191,6 @@
             this.txtstrandcourse.Name = "txtstrandcourse";
             this.txtstrandcourse.Size = new System.Drawing.Size(180, 26);
             this.txtstrandcourse.TabIndex = 81;
-            this.txtstrandcourse.TextChanged += new System.EventHandler(this.txtstrandcourse_TextChanged);
             // 
             // txtlevel
             // 

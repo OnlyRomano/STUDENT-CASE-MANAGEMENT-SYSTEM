@@ -22,9 +22,9 @@ namespace CS311_DATABASE_2024
 
         Class1 newcase = new Class1("127.0.0.1", "cs311c2024", "jhunmark", "romano");
         private int errorCount;
-        private bool isLoadingViolations = false; // To track whether violations are being loaded
+        private bool isLoadingViolations = false; 
 
-        private DataGridView dgvCases;  // To store reference to DataGridView from frmCases
+        private DataGridView dgvCases;  
 
         public frmNewcase(string username, string studentID, string lastname, string firstname,
                           string middlename, string level, string strandcourse, DataGridView dgvCases)
@@ -37,7 +37,7 @@ namespace CS311_DATABASE_2024
             this.middlename = middlename;
             this.level = level;
             this.strandcourse = strandcourse;
-            this.dgvCases = dgvCases;  // Store reference to DataGridView
+            this.dgvCases = dgvCases;  
             panel1.MouseDown += new MouseEventHandler(Form_MouseDown);
         }
 
@@ -54,7 +54,8 @@ namespace CS311_DATABASE_2024
         {
             cmbviolationid.SelectedIndex = -1;
             txtviolationdescription.Clear();
-            cmbviolationcount.SelectedIndex = -1; // Clear the violation count when clearing form
+            cmbviolationcount.SelectedIndex = -1; 
+            errorProvider1.Clear();
         }
 
         private void validateForm()
@@ -64,16 +65,6 @@ namespace CS311_DATABASE_2024
             if (cmbviolationid.SelectedIndex < 0)
             {
                 errorProvider1.SetError(cmbviolationid, "Select violation ID");
-                errorCount++;
-            }
-            if (cmbviolationcount.SelectedIndex < 0)
-            {
-                errorProvider1.SetError(cmbviolationcount, "Violation Count is empty");
-                errorCount++;
-            }
-            if (string.IsNullOrEmpty(txtviolationdescription.Text))
-            {
-                errorProvider1.SetError(txtviolationdescription, "Violation description is empty");
                 errorCount++;
             }
         }
@@ -87,11 +78,9 @@ namespace CS311_DATABASE_2024
                 if (dr == DialogResult.Yes)
                 {
                     try
-                    {
-                        // Get the violation type
+                    { 
                         string vtype = GetViolationType(cmbviolationid.Text);
 
-                        // Insert new case into tblcases
                         newcase.executeSQL("INSERT INTO tblcases (caseID, studentID, violationID, status, violation_count, createdby, datecreated) VALUES ('" + txtcaseid.Text
                             + "', '" + txtstudentid.Text + "', '" + cmbviolationid.Text + "', 'ONGOING', '" + cmbviolationcount.Text.ToUpper() + "', '"
                             + username + "', '" + DateTime.Now.ToShortDateString() + "')");
@@ -118,25 +107,20 @@ namespace CS311_DATABASE_2024
             this.Close();
         }
 
-
-        // Function to load violations into cmbviolationid
         private void LoadViolations()
         {
             try
             {
-                isLoadingViolations = true;  // Set flag to true to avoid triggering the SelectedIndexChanged event
-
-                // Query to get violation codes and descriptions
+                isLoadingViolations = true;  
                 string query = "SELECT code, description FROM tblviolation WHERE status = 'active'";
                 DataTable violationData = newcase.GetData(query);
 
-                // Check if data is available
                 if (violationData.Rows.Count > 0)
                 {
                     cmbviolationid.DataSource = violationData;
-                    cmbviolationid.DisplayMember = "code";  // Display vcode in ComboBox
-                    cmbviolationid.ValueMember = "description";  // Store description as ValueMember
-                    cmbviolationid.SelectedIndex = -1;  // Set to no selection by default
+                    cmbviolationid.DisplayMember = "code"; 
+                    cmbviolationid.ValueMember = "description"; 
+                    cmbviolationid.SelectedIndex = -1; 
                 }
                 else
                 {
@@ -149,7 +133,7 @@ namespace CS311_DATABASE_2024
             }
             finally
             {
-                isLoadingViolations = false;  // Reset the flag after loading violations
+                isLoadingViolations = false; 
             }
         }
 
@@ -158,7 +142,6 @@ namespace CS311_DATABASE_2024
             int count = 0;
             foreach (DataGridViewRow row in dgvCases.Rows)
             {
-                // Ensure that the DataGridView has the correct column name for vcode
                 if (row.Cells["violationID"].Value != null && row.Cells["violationID"].Value.ToString() == vcode)
                 {
                     count++;
@@ -176,24 +159,21 @@ namespace CS311_DATABASE_2024
                 {
                     string vcode = selectedRow["code"].ToString();
 
-                    // Fetch violation description
                     txtviolationdescription.Text = selectedRow["description"].ToString();
 
-                    // Check how many times this vcode exists in the student's current cases
                     int violationCount = CountOccurrencesInGrid(vcode);
 
-                    // Set cmbviolationcount based on the occurrence count
                     if (violationCount == 0)
                     {
-                        cmbviolationcount.SelectedItem = "FIRST OFFENSE";  // First offense
+                        cmbviolationcount.SelectedItem = "FIRST OFFENSE";  
                     }
                     else if (violationCount == 1)
                     {
-                        cmbviolationcount.SelectedItem = "SECOND OFFENSE";  // Second offense
+                        cmbviolationcount.SelectedItem = "SECOND OFFENSE"; 
                     }
                     else
                     {
-                        cmbviolationcount.SelectedItem = "REPEAT OFFENSE";  // Repeat offense
+                        cmbviolationcount.SelectedItem = "REPEAT OFFENSE";  
                     }
                 }
                 else
@@ -202,7 +182,6 @@ namespace CS311_DATABASE_2024
                 }
             }
         }
-        // Function to get the violation description
         private string GetViolationDescription(string code)
         {
             string description = "";
@@ -223,7 +202,6 @@ namespace CS311_DATABASE_2024
 
             return description;
         }
-        // Function to get the violation type
         private string GetViolationType(string code)
         {
             string vtype = "";
@@ -247,18 +225,13 @@ namespace CS311_DATABASE_2024
 
         private void frmNewcase_Load(object sender, EventArgs e)
         {
-            // Automatically generate the case ID when the form loads
             txtcaseid.Text = $"CASE-{DateTime.Now:yyyyMMddHHmmss}";
-
-            // Display the student data in the respective text boxes
             txtstudentid.Text = studentID;
             txtlastname.Text = lastname;
             txtfirstname.Text = firstname;
             txtmiddlename.Text = middlename;
             txtlevel.Text = level;
             txtstrandcourse.Text = strandcourse;
-
-            // Load violations into the ComboBox
             LoadViolations();
         }
     }

@@ -256,9 +256,9 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.icons8_account_management_100;
+            this.pictureBox2.BackgroundImage = global::CS311C_DATABASE2024.Properties.Resources.account_manager;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(57, 173);
+            this.pictureBox2.Location = new System.Drawing.Point(50, 173);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(112, 109);
             this.pictureBox2.TabIndex = 17;

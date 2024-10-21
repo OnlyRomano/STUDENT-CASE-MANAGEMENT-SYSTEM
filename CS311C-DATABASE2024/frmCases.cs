@@ -25,7 +25,7 @@ namespace CS311_DATABASE_2024
             txtlevel.Clear();
             txtstrandcourse.Clear();
             txtsearch.Clear();
-            dataGridView1.DataSource = null;  // Clear the DataGridView
+            dataGridView1.DataSource = null; 
         }
 
         private DataTable GetStudentData(string studentNumber)
@@ -42,21 +42,17 @@ namespace CS311_DATABASE_2024
 
         private void btnclear_Click(object sender, EventArgs e)
         {
-            // Clear the student information textboxes
             ClearStudentInformation();
-
-            // Optionally, you can also clear the search textbox
             txtsearch.Clear();
         }
 
         private int row;
         private void btnadd_Click(object sender, EventArgs e)
         {
-            // Ensure that a student is searched and student information is populated
             if (!string.IsNullOrEmpty(txtsearch.Text) &&
                 !string.IsNullOrEmpty(txtlastname.Text) &&
                 !string.IsNullOrEmpty(txtfirstname.Text) &&
-                dataGridView1.Rows.Count > 0) // Check if there are rows in the DataGridView
+                dataGridView1.Rows.Count > 0)
             {
                 string studentID = txtsearch.Text;
                 string lastname = txtlastname.Text;
@@ -65,7 +61,6 @@ namespace CS311_DATABASE_2024
                 string level = txtlevel.Text;
                 string strandcourse = txtstrandcourse.Text;
 
-                // Pass DataGridView reference to frmNewcase
                 frmNewcase newCaseForm = new frmNewcase(username, studentID, lastname, firstname, middlename, level, strandcourse, dataGridView1);
                 newCaseForm.Show();
             }
@@ -77,51 +72,39 @@ namespace CS311_DATABASE_2024
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            // Ensure that a student is searched first
-            if (!string.IsNullOrEmpty(txtsearch.Text))
+            if (string.IsNullOrEmpty(txtsearch.Text))
             {
-                // Ensure that a student is searched first
-                if (!string.IsNullOrEmpty(txtsearch.Text))
-                {
-                    // Check if the student information fields are populated
-                    if (!string.IsNullOrEmpty(txtlastname.Text) && !string.IsNullOrEmpty(txtfirstname.Text))
-                    {
-                        // Check if there are any rows in the DataGridView
-                        if (dataGridView1.CurrentRow != null) // Check if a case is selected
-                        {
-                            string caseID = dataGridView1.CurrentRow.Cells["caseID"].Value.ToString();
-                            string studentID = txtsearch.Text;
-                            string lastname = txtlastname.Text;
-                            string firstname = txtfirstname.Text;
-                            string middlename = txtmiddlename.Text;
-                            string level = txtlevel.Text;
-                            string strandcourse = txtstrandcourse.Text;
-                            string vcode = dataGridView1.CurrentRow.Cells["violationID"].Value.ToString();
-                            string description = dataGridView1.CurrentRow.Cells["description"].Value.ToString();
-                            string vcount = dataGridView1.CurrentRow.Cells["violation_count"].Value.ToString();
-                            string status = dataGridView1.CurrentRow.Cells["status"].Value.ToString();
-                            string action = dataGridView1.CurrentRow.Cells["action"].Value.ToString();
-
-                            // Pass DataGridView reference to frmUpdatecase
-                            frmUpdatecase updateCaseForm = new frmUpdatecase(username, caseID, studentID, lastname, firstname, middlename, level, strandcourse, vcode, description, vcount, status, action);
-                            updateCaseForm.Show();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No cases available for this student.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please ensure the student information is populated before updating a case.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please search for a student before updating a case.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                MessageBox.Show("Please search for a student before updating a case.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
             }
 
+            if (string.IsNullOrEmpty(txtlastname.Text) || string.IsNullOrEmpty(txtfirstname.Text))
+            {
+                MessageBox.Show("Please ensure the student information is populated before updating a case.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("No cases available for this student.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string caseID = dataGridView1.CurrentRow.Cells["caseID"].Value.ToString();
+            string studentID = txtsearch.Text;
+            string lastname = txtlastname.Text;
+            string firstname = txtfirstname.Text;
+            string middlename = txtmiddlename.Text;
+            string level = txtlevel.Text;
+            string strandcourse = txtstrandcourse.Text;
+            string vcode = dataGridView1.CurrentRow.Cells["violationID"].Value.ToString();
+            string description = dataGridView1.CurrentRow.Cells["description"].Value.ToString();
+            string vcount = dataGridView1.CurrentRow.Cells["violation_count"].Value.ToString();
+            string status = dataGridView1.CurrentRow.Cells["status"].Value.ToString();
+            string action = dataGridView1.CurrentRow.Cells["action"].Value.ToString();
+
+            frmUpdatecase updateCaseForm = new frmUpdatecase(username, caseID, studentID, lastname, firstname, middlename, level, strandcourse, vcode, description, vcount, status, action);
+            updateCaseForm.Show();
         }
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
@@ -130,7 +113,6 @@ namespace CS311_DATABASE_2024
 
             if (!string.IsNullOrEmpty(studentNumber))
             {
-                // Clear the DataGridView before loading data for the searched student
                 dataGridView1.DataSource = null;
                 dataGridView1.Rows.Clear();
 
@@ -144,11 +126,9 @@ namespace CS311_DATABASE_2024
                     txtlevel.Text = studentData.Rows[0]["level"].ToString();
                     txtstrandcourse.Text = studentData.Rows[0]["strand_course"].ToString();
 
-                    // Now load the cases for the searched student with updated table structure
                     string query = "SELECT caseID, violationID, status, violation_count, action, createdby, datecreated FROM tblcases WHERE studentID = '" + studentNumber + "'";
                     DataTable caseData = cases.GetData(query);
 
-                    // Now add description and vtype from tblviolations based on vcode
                     DataTable resultData = new DataTable();
                     resultData.Columns.Add("caseID");
                     resultData.Columns.Add("violationID");

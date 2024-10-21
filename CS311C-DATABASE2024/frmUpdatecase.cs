@@ -26,16 +26,6 @@ namespace CS311_DATABASE_2024
 
         private string username, caseID, studentID, lastname, firstname, middlename, level, strandcourse, vcode, description, vcount,status, action;
 
-        private void cmbviolationcount_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtstrandcourse_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -75,14 +65,20 @@ namespace CS311_DATABASE_2024
         {
             errorProvider1.Clear();
             errorCount = 0;
-            if (cmbstatus.SelectedIndex < 0)
+            if (cmbstatus.SelectedIndex < 1)
             {
-                errorProvider1.SetError(cmbstatus, "Select status");
+                errorProvider1.SetError(cmbstatus, "Select status to resolved");
                 errorCount++;
             }
+        }
+
+       private void validataAction()
+        {
+            errorProvider1.Clear();
+            errorCount = 0;
             if (string.IsNullOrEmpty(txtaction.Text))
             {
-                errorProvider1.SetError(txtaction, "Password is empty");
+                errorProvider1.SetError(txtaction, "description is empty");
                 errorCount++;
             }
         }
@@ -159,47 +155,51 @@ namespace CS311_DATABASE_2024
 
         private void btnclear_Click(object sender, EventArgs e)
         {
-            cmbstatus.SelectedIndex = -1;
+            cmbstatus.SelectedIndex = 0;
             txtaction.Clear();
+            errorProvider1.Clear();
         }
-
 
         private void btnsave_Click(object sender, EventArgs e)
         {
+            validateForm();  // Validate the form input
+            if (cmbstatus.SelectedItem != null && cmbstatus.SelectedItem.ToString().ToUpper() == "RESOLVED")
             {
-                validateForm();  // Validate the form input
-                if (errorCount == 0)  // If there are no validation errors
-                {
-                    DialogResult dr = MessageBox.Show("Are you sure you want to update this case?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dr == DialogResult.Yes)
-                    {
-                        try
-                        {
-                            // Update the case in the database using the provided status and action
-                            updatecase.executeSQL("UPDATE tblcases SET status = '" + cmbstatus.Text.ToUpper() + "', action = '" + txtaction.Text.ToUpper()
-                            + "' WHERE caseID = '" + caseID + "'");
-                            // Check if the update was successful (i.e., rows were affected)
-                            if (updatecase.rowAffected > 0)
-                            {
-                                // Log the update action into the tbllogs table
-                                updatecase.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) " +
-                                    "VALUES ('" + DateTime.Now.ToShortDateString() + "', '" + DateTime.Now.ToShortTimeString() + "', 'Update', 'Case Management', '" + caseID + "', '" + username + "')");
+                validataAction();  // Validate action only if status is "RESOLVED"
+            }
 
-                                MessageBox.Show("Case Updated", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Close();  // Close the form after successful update
-                            }
-                            else
-                            {
-                                MessageBox.Show("No changes were made to the case.", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                        }
-                        catch (Exception ex)
+            if (errorCount == 0)  // If there are no validation errors
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to update this case?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    try
+                    {
+                        // Update the case in the database using the provided status and action
+                        updatecase.executeSQL("UPDATE tblcases SET status = '" + cmbstatus.Text.ToUpper() + "', action = '" + txtaction.Text.ToUpper()
+                        + "' WHERE caseID = '" + caseID + "'");
+                        // Check if the update was successful (i.e., rows were affected)
+                        if (updatecase.rowAffected > 0)
                         {
-                            MessageBox.Show(ex.Message, "Error updating case", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            // Log the update action into the tbllogs table
+                            updatecase.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) " +
+                                "VALUES ('" + DateTime.Now.ToShortDateString() + "', '" + DateTime.Now.ToShortTimeString() + "', 'Update', 'Case Management', '" + caseID + "', '" + username + "')");
+
+                            MessageBox.Show("Case Updated", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();  // Close the form after successful update
                         }
+                        else
+                        {
+                            MessageBox.Show("No changes were made to the case.", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error updating case", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
+
         }
     }
 }
