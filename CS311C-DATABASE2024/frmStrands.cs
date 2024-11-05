@@ -24,11 +24,18 @@ namespace CS311C_DATABASE2024
         private const int HTCAPTION = 0x2;
 
         private string username;
+
+        private Timer autorefresh;
         public frmStrands(string username)
         {
             InitializeComponent();
             this.username = username;
             panel2.MouseDown += new MouseEventHandler(Form_MouseDown);
+
+            autorefresh = new Timer();
+            autorefresh.Interval = 5000;
+            autorefresh.Tick += AutoRefresh_Tick;
+            autorefresh.Start();
         }
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
@@ -131,6 +138,11 @@ namespace CS311C_DATABASE2024
 
             frmUpdateStrand updatestrandfrm = new frmUpdateStrand(editstrand_code, editdescription, username);
             updatestrandfrm.Show();
+        }
+
+        private void AutoRefresh_Tick(object sender, EventArgs e)
+        {
+            frmStrands_Load(sender, e);
         }
     }
 }

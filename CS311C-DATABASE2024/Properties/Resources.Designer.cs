@@ -93,6 +93,26 @@ namespace CS311C_DATABASE2024.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap catgif {
+            get {
+                object obj = ResourceManager.GetObject("catgif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap catgif1 {
+            get {
+                object obj = ResourceManager.GetObject("catgif1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
@@ -106,6 +126,16 @@ namespace CS311C_DATABASE2024.Properties {
         internal static System.Drawing.Bitmap control_12058800 {
             get {
                 object obj = ResourceManager.GetObject("control_12058800", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cutecat {
+            get {
+                object obj = ResourceManager.GetObject("cutecat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -516,6 +546,26 @@ namespace CS311C_DATABASE2024.Properties {
         internal static System.Drawing.Bitmap student_card {
             get {
                 object obj = ResourceManager.GetObject("student-card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tkthao219_peach {
+            get {
+                object obj = ResourceManager.GetObject("tkthao219-peach", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tkthao219_peach1 {
+            get {
+                object obj = ResourceManager.GetObject("tkthao219-peach1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

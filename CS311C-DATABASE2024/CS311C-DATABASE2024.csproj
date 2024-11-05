@@ -545,6 +545,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="arellano_university_logo_au_freelogovectors.net_-400x400.ico" />
+    <None Include="Resources\tkthao219-peach1.gif" />
+    <None Include="Resources\catgif1.gif" />
+    <None Include="Resources\catgif.gif" />
+    <None Include="Resources\cutecat.gif" />
+    <None Include="Resources\tkthao219-peach.gif" />
     <None Include="Resources\account-manager.png" />
     <None Include="Resources\icons8-course-1002.png" />
     <None Include="Resources\icons8-classroom-100.png" />

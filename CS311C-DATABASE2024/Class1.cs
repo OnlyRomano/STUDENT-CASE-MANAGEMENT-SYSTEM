@@ -2,6 +2,7 @@
 //using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using System.Data;
+using System;
 
 
 namespace CS311C_DATABASE2024
@@ -44,6 +45,12 @@ namespace CS311C_DATABASE2024
             //execute the sql command
             rowAffected = SQLcom.ExecuteNonQuery();
         }
+
+        internal DataTable GetData(string query, object value)
+        {
+            throw new NotImplementedException();
+        }
+
         public string SqlConString { get; set; }
 
     }

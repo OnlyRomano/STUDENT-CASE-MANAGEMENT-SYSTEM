@@ -138,5 +138,10 @@ namespace CS311C_DATABASE2024
         {
             this.Close();    
         }
+
+        private void frmNewAccount_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

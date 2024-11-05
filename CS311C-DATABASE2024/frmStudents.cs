@@ -23,12 +23,18 @@ namespace CS311C_DATABASE2024
         private const int HTCAPTION = 0x2;
 
         private string username;
+        private Timer autorefresh;
         public frmStudents(string username)
         {
             InitializeComponent();
             this.username = username;
             panel2.MouseDown += new MouseEventHandler(Form_MouseDown);
             panel1.MouseDown += new MouseEventHandler(Form_MouseDown);
+
+            autorefresh = new Timer();
+            autorefresh.Interval = 5000;
+            autorefresh.Tick += AutoRefresh_Tick;
+            autorefresh.Start();
         }
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
@@ -136,6 +142,11 @@ namespace CS311C_DATABASE2024
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AutoRefresh_Tick(object sender, EventArgs e)
+        {
+            frmStudents_Load(sender, e);
         }
     }
 }

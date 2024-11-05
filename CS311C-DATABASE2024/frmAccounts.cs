@@ -24,6 +24,7 @@ namespace CS311C_DATABASE2024
         private const int HTCAPTION = 0x2;
 
         private string username;
+        private Timer autorefresh;
 
         public frmAccounts(string username)
         {
@@ -31,6 +32,11 @@ namespace CS311C_DATABASE2024
             this.username = username;
             panel2.MouseDown += new MouseEventHandler(Form_MouseDown);
             panel1.MouseDown += new MouseEventHandler(Form_MouseDown);
+
+            autorefresh = new Timer();
+            autorefresh.Interval = 5000;
+            autorefresh.Tick += AutoRefresh_Tick;
+            autorefresh.Start();
         }
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
@@ -63,7 +69,7 @@ namespace CS311C_DATABASE2024
         {
             try
             {
-                DataTable dt = accounts.GetData("SELECT username, password, usertype, status, createdby, datecreated FROM tblaccounts WHERE username <> '" + username + 
+                DataTable dt = accounts.GetData("SELECT username, password, usertype, status, createdby, datecreated FROM tblaccounts WHERE username <> '" + username +
                     "'AND (username LIKE '%" + txtsearch.Text + "%' OR usertype LIKE '%" + txtsearch.Text + "%') ORDER BY username");
                 dataGridView1.DataSource = dt;
             }
@@ -109,7 +115,7 @@ namespace CS311C_DATABASE2024
                     accounts.executeSQL("DELETE FROM tblaccounts WHERE username = '" + selectedUser + "'");
                     if (accounts.rowAffected > 0)
                     {
-                        accounts.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() + 
+                        accounts.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() +
                             "', '" + DateTime.Now.ToShortTimeString() + "', 'Delete','Accounts Management', '" + selectedUser + "', '" + username + "')");
                         MessageBox.Show("Account Deleted", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -123,13 +129,22 @@ namespace CS311C_DATABASE2024
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string editusername = dataGridView1.Rows[row].Cells[0].Value.ToString();
-            string editpassword = dataGridView1.Rows[row].Cells[1].Value.ToString();
-            string edittype = dataGridView1.Rows[row].Cells[2].Value.ToString();
-            string editstatus = dataGridView1.Rows[row].Cells[3].Value.ToString();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridView1.SelectedRows[0].Index;
 
-            frmUpdateAccount updateaccountfrm = new frmUpdateAccount(editusername, editpassword, edittype, editstatus, username);
-            updateaccountfrm.Show();
+                string editusername = dataGridView1.Rows[selectedIndex].Cells[0].Value.ToString();
+                string editpassword = dataGridView1.Rows[selectedIndex].Cells[1].Value.ToString();
+                string edittype = dataGridView1.Rows[selectedIndex].Cells[2].Value.ToString();
+                string editstatus = dataGridView1.Rows[selectedIndex].Cells[3].Value.ToString();
+
+                frmUpdateAccount updateaccountfrm = new frmUpdateAccount(editusername, editpassword, edittype, editstatus, username);
+                updateaccountfrm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select an account to update.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -137,14 +152,9 @@ namespace CS311C_DATABASE2024
             this.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void AutoRefresh_Tick(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            frmAccounts_Load(sender, e);
         }
     }
 }

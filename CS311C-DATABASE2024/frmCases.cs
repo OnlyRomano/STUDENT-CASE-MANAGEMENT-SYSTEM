@@ -10,11 +10,16 @@ namespace CS311_DATABASE_2024
     {
         Class1 cases = new Class1("127.0.0.1", "cs311c2024", "jhunmark", "romano");
         private string username;
+        private Timer autorefresh;
 
         public frmCases(string username)
         {
             InitializeComponent();
             this.username = username;
+
+            autorefresh = new Timer();
+            autorefresh.Interval = 5000;
+            autorefresh.Tick += AutoRefresh_Tick;
         }
 
         private void ClearStudentInformation()
@@ -38,6 +43,8 @@ namespace CS311_DATABASE_2024
         {
             dataGridView1.DataSource = null;
             dataGridView1.Rows.Clear();
+
+            autorefresh.Start();
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -107,7 +114,7 @@ namespace CS311_DATABASE_2024
             updateCaseForm.Show();
         }
 
-        private void txtsearch_TextChanged(object sender, EventArgs e)
+        private void RefreshData()
         {
             string studentNumber = txtsearch.Text.Trim();
 
@@ -137,7 +144,7 @@ namespace CS311_DATABASE_2024
                     resultData.Columns.Add("violation_count");
                     resultData.Columns.Add("status");
                     resultData.Columns.Add("action");
-                    resultData.Columns.Add("date");
+                    resultData.Columns.Add("datecreated");
                     foreach (DataRow row in caseData.Rows)
                     {
                         string vcode = row["violationID"].ToString();
@@ -148,6 +155,7 @@ namespace CS311_DATABASE_2024
                         string vtype = violationData.Rows.Count > 0 ? violationData.Rows[0]["violation_type"].ToString() : string.Empty;
 
                         resultData.Rows.Add(row["caseID"], vcode, description, vtype, row["violation_count"], row["status"], row["action"], row["datecreated"]);
+                        resultData.DefaultView.Sort = "caseID DESC";
                     }
 
                     dataGridView1.DataSource = resultData;
@@ -157,6 +165,11 @@ namespace CS311_DATABASE_2024
             {
                 ClearStudentInformation();
             }
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            RefreshData();
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -174,6 +187,16 @@ namespace CS311_DATABASE_2024
             {
                 MessageBox.Show(ex.Message, "Error on Datagrid cellclick", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AutoRefresh_Tick(object sender, EventArgs e)
+        {
+            RefreshData();
         }
     }
 }
