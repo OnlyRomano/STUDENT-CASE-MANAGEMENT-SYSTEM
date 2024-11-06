@@ -10,16 +10,11 @@ namespace CS311_DATABASE_2024
     {
         Class1 cases = new Class1("127.0.0.1", "cs311c2024", "jhunmark", "romano");
         private string username;
-        private Timer autorefresh;
 
         public frmCases(string username)
         {
             InitializeComponent();
             this.username = username;
-
-            autorefresh = new Timer();
-            autorefresh.Interval = 5000;
-            autorefresh.Tick += AutoRefresh_Tick;
         }
 
         private void ClearStudentInformation()
@@ -43,8 +38,6 @@ namespace CS311_DATABASE_2024
         {
             dataGridView1.DataSource = null;
             dataGridView1.Rows.Clear();
-
-            autorefresh.Start();
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -69,6 +62,7 @@ namespace CS311_DATABASE_2024
                 string strandcourse = txtstrandcourse.Text;
 
                 frmNewcase newCaseForm = new frmNewcase(username, studentID, lastname, firstname, middlename, level, strandcourse, dataGridView1);
+                newCaseForm.CaseAdd += (s, ev) => txtsearch_TextChanged(sender, e);
                 newCaseForm.Show();
             }
             else
@@ -111,10 +105,12 @@ namespace CS311_DATABASE_2024
             string action = dataGridView1.CurrentRow.Cells["action"].Value.ToString();
 
             frmUpdatecase updateCaseForm = new frmUpdatecase(username, caseID, studentID, lastname, firstname, middlename, level, strandcourse, vcode, description, vcount, status, action);
+            updateCaseForm.CaseUpdate += (s, ev) => txtsearch_TextChanged(sender, e);
+
             updateCaseForm.Show();
         }
 
-        private void RefreshData()
+        private void txtsearch_TextChanged(object sender, EventArgs e)
         {
             string studentNumber = txtsearch.Text.Trim();
 
@@ -167,11 +163,6 @@ namespace CS311_DATABASE_2024
             }
         }
 
-        private void txtsearch_TextChanged(object sender, EventArgs e)
-        {
-            RefreshData();
-        }
-
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -192,11 +183,6 @@ namespace CS311_DATABASE_2024
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void AutoRefresh_Tick(object sender, EventArgs e)
-        {
-            RefreshData();
         }
     }
 }

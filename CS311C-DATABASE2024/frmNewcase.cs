@@ -69,6 +69,8 @@ namespace CS311_DATABASE_2024
             }
         }
 
+        public event EventHandler CaseAdd;
+
         private void btnsave_Click(object sender, EventArgs e)
         {
             validateForm();
@@ -90,6 +92,7 @@ namespace CS311_DATABASE_2024
                             newcase.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() +
                                 "', '" + DateTime.Now.ToShortTimeString() + "', 'Add', 'Cases Management', '" + txtcaseid.Text + "', '" + username + "')");
                             MessageBox.Show("New case added successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CaseAdd?.Invoke(this, EventArgs.Empty);
                             this.Close();
                         }
 

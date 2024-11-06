@@ -58,8 +58,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -109,7 +109,7 @@
             this.txtaction.Location = new System.Drawing.Point(478, 128);
             this.txtaction.Multiline = true;
             this.txtaction.Name = "txtaction";
-            this.txtaction.Size = new System.Drawing.Size(180, 84);
+            this.txtaction.Size = new System.Drawing.Size(260, 143);
             this.txtaction.TabIndex = 3;
             // 
             // btnclear
@@ -120,7 +120,7 @@
             this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclear.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclear.ForeColor = System.Drawing.Color.White;
-            this.btnclear.Location = new System.Drawing.Point(554, 218);
+            this.btnclear.Location = new System.Drawing.Point(552, 277);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(70, 35);
             this.btnclear.TabIndex = 62;
@@ -136,7 +136,7 @@
             this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsave.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsave.ForeColor = System.Drawing.Color.White;
-            this.btnsave.Location = new System.Drawing.Point(478, 218);
+            this.btnsave.Location = new System.Drawing.Point(476, 277);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(70, 35);
             this.btnsave.TabIndex = 61;
@@ -365,8 +365,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(714, 56);
+            this.panel1.Size = new System.Drawing.Size(786, 56);
             this.panel1.TabIndex = 85;
+            // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.Transparent;
+            this.exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit.BackgroundImage")));
+            this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exit.Location = new System.Drawing.Point(742, 12);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(32, 31);
+            this.exit.TabIndex = 34;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // label13
             // 
@@ -380,19 +393,6 @@
             this.label13.Size = new System.Drawing.Size(104, 21);
             this.label13.TabIndex = 33;
             this.label13.Text = "Update Case";
-            // 
-            // exit
-            // 
-            this.exit.BackColor = System.Drawing.Color.Transparent;
-            this.exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit.BackgroundImage")));
-            this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exit.Location = new System.Drawing.Point(670, 12);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(32, 31);
-            this.exit.TabIndex = 34;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // pictureBox4
             // 
@@ -410,7 +410,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
-            this.ClientSize = new System.Drawing.Size(714, 452);
+            this.ClientSize = new System.Drawing.Size(786, 452);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmbviolationcount);
             this.Controls.Add(this.txtviolationdescription);

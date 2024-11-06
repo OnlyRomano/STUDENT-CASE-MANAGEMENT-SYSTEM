@@ -54,7 +54,6 @@
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.tblcoursesTableAdapter = new CS311C_DATABASE2024.cs311c2024DataSet2TableAdapters.tblcoursesTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.AutoRefresh = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -347,10 +346,6 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
-            // AutoRefresh
-            // 
-            this.AutoRefresh.Tick += new System.EventHandler(this.AutoRefresh_Tick);
-            // 
             // frmCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,6 +403,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datecreatedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createdbyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Timer AutoRefresh;
     }
 }

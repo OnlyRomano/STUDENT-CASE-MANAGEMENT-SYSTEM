@@ -160,6 +160,8 @@ namespace CS311_DATABASE_2024
             errorProvider1.Clear();
         }
 
+        public event EventHandler CaseUpdate;
+
         private void btnsave_Click(object sender, EventArgs e)
         {
             validateForm();  // Validate the form input
@@ -186,6 +188,7 @@ namespace CS311_DATABASE_2024
                                 "VALUES ('" + DateTime.Now.ToShortDateString() + "', '" + DateTime.Now.ToShortTimeString() + "', 'Update', 'Case Management', '" + caseID + "', '" + username + "')");
 
                             MessageBox.Show("Case Updated", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CaseUpdate?.Invoke(this, EventArgs.Empty);
                             this.Close();  // Close the form after successful update
                         }
                         else

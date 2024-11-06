@@ -67,6 +67,8 @@ namespace CS311C_DATABASE2024
             errorProvider1.Clear();
         }
 
+        public event EventHandler CourseUpdate;
+
         private void btnsave_Click(object sender, EventArgs e)
         {
             validateForm();
@@ -84,6 +86,7 @@ namespace CS311C_DATABASE2024
                             updatecourse.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() + "', '" + DateTime.Now.ToShortTimeString() +
                                 "', 'Update','Course Management', '" + txtcourse_code.Text + "', '" + username + "')");
                             MessageBox.Show("Course Updated", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CourseUpdate?.Invoke(this, EventArgs.Empty);
                             this.Close();
                         }
                     }

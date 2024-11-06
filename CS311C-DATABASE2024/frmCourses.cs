@@ -24,18 +24,12 @@ namespace CS311C_DATABASE2024
         private const int HTCAPTION = 0x2;
 
         private string username;
-        private Timer autorefresh;
 
         public frmCourses(string username)
         {
             InitializeComponent();
             this.username = username;
             panel2.MouseDown += new MouseEventHandler(Form_MouseDown);
-
-            autorefresh = new Timer();
-            autorefresh.Interval = 5000;
-            autorefresh.Tick += AutoRefresh_Tick;
-            autorefresh.Start();
         }
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
@@ -80,6 +74,7 @@ namespace CS311C_DATABASE2024
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmNewCourse newcoursefrm = new frmNewCourse(username);
+            newcoursefrm.CourseAdd += (s, ev) => frmCourses_Load(sender, e);
             newcoursefrm.Show();
         }
 
@@ -115,6 +110,7 @@ namespace CS311C_DATABASE2024
                         course.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() +
                             "', '" + DateTime.Now.ToShortTimeString() + "', 'Delete','Courses Management', '" + selectedCourse + "', '" + username + "')");
                         MessageBox.Show("Course Deleted", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frmCourses_Load(sender, e);
                     }
                 }
                 catch (Exception ex)
@@ -135,12 +131,8 @@ namespace CS311C_DATABASE2024
             string editdescription = dataGridView1.Rows[row].Cells[1].Value.ToString();
 
             frmUpdateCourse updatecoursefrm = new frmUpdateCourse(editcourse_code, editdescription, username);
+            updatecoursefrm.CourseUpdate += (s, ev) => frmCourses_Load(sender, e);
             updatecoursefrm.Show();
-        }
-
-        private void AutoRefresh_Tick(object sender, EventArgs e)
-        {
-            frmCourses_Load(sender, e);
         }
     }
 }

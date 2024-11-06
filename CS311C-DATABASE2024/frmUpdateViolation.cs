@@ -106,6 +106,8 @@ namespace CS311C_DATABASE2024
             }
         }
 
+        public event EventHandler ViolationUpdate;
+
         private void btnsave_Click(object sender, EventArgs e)
         {
             validationForm();
@@ -124,6 +126,7 @@ namespace CS311C_DATABASE2024
                             updateViolation.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() + "', '" + DateTime.Now.ToShortTimeString() +
                                 "', 'Update','Violation Management', '" + txtcode.Text + "', '" + username + "')");
                             MessageBox.Show("Violation Updated", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ViolationUpdate?.Invoke(this, EventArgs.Empty); 
                             this.Close();
                         }
                     }

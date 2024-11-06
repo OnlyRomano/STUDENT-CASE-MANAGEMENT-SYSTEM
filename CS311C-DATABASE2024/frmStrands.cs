@@ -24,18 +24,11 @@ namespace CS311C_DATABASE2024
         private const int HTCAPTION = 0x2;
 
         private string username;
-
-        private Timer autorefresh;
         public frmStrands(string username)
         {
             InitializeComponent();
             this.username = username;
             panel2.MouseDown += new MouseEventHandler(Form_MouseDown);
-
-            autorefresh = new Timer();
-            autorefresh.Interval = 5000;
-            autorefresh.Tick += AutoRefresh_Tick;
-            autorefresh.Start();
         }
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
@@ -111,6 +104,7 @@ namespace CS311C_DATABASE2024
                         strand.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() +
                             "', '" + DateTime.Now.ToShortTimeString() + "', 'Delete','Strand Management', '" + selectedStrand + "', '" + username + "')");
                         MessageBox.Show("Strand Deleted", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frmStrands_Load(sender, e);
                     }
                 }
                 catch (Exception ex)
@@ -128,6 +122,8 @@ namespace CS311C_DATABASE2024
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmNewStrand strandnewfrm = new frmNewStrand(username);
+            strandnewfrm.StrandAdd += (s, ev) => frmStrands_Load(sender, e);
+
             strandnewfrm.Show();
         }
 
@@ -137,12 +133,9 @@ namespace CS311C_DATABASE2024
             string editdescription = dataGridView1.Rows[row].Cells[1].Value.ToString();
 
             frmUpdateStrand updatestrandfrm = new frmUpdateStrand(editstrand_code, editdescription, username);
-            updatestrandfrm.Show();
-        }
+            updatestrandfrm.StrandUpdate += (s, ev) => frmStrands_Load(sender, e);
 
-        private void AutoRefresh_Tick(object sender, EventArgs e)
-        {
-            frmStrands_Load(sender, e);
+            updatestrandfrm.Show();
         }
     }
 }

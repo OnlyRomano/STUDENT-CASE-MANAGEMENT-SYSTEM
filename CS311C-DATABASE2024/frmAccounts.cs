@@ -24,19 +24,12 @@ namespace CS311C_DATABASE2024
         private const int HTCAPTION = 0x2;
 
         private string username;
-        private Timer autorefresh;
-
         public frmAccounts(string username)
         {
             InitializeComponent();
             this.username = username;
             panel2.MouseDown += new MouseEventHandler(Form_MouseDown);
             panel1.MouseDown += new MouseEventHandler(Form_MouseDown);
-
-            autorefresh = new Timer();
-            autorefresh.Interval = 5000;
-            autorefresh.Tick += AutoRefresh_Tick;
-            autorefresh.Start();
         }
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
@@ -82,6 +75,7 @@ namespace CS311C_DATABASE2024
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmNewAccount newaccountform = new frmNewAccount(username);
+            newaccountform.AccountAdded += (s, ev) => frmAccounts_Load(sender, e);
             newaccountform.Show();
         }
 
@@ -118,6 +112,7 @@ namespace CS311C_DATABASE2024
                         accounts.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() +
                             "', '" + DateTime.Now.ToShortTimeString() + "', 'Delete','Accounts Management', '" + selectedUser + "', '" + username + "')");
                         MessageBox.Show("Account Deleted", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frmAccounts_Load(sender, e);
                     }
                 }
                 catch (Exception ex)
@@ -139,6 +134,8 @@ namespace CS311C_DATABASE2024
                 string editstatus = dataGridView1.Rows[selectedIndex].Cells[3].Value.ToString();
 
                 frmUpdateAccount updateaccountfrm = new frmUpdateAccount(editusername, editpassword, edittype, editstatus, username);
+                updateaccountfrm.AccountUpdate += (s, ev) => frmAccounts_Load(sender, e);
+
                 updateaccountfrm.Show();
             }
             else
@@ -150,11 +147,6 @@ namespace CS311C_DATABASE2024
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void AutoRefresh_Tick(object sender, EventArgs e)
-        {
-            frmAccounts_Load(sender, e);
         }
     }
 }

@@ -179,6 +179,8 @@ namespace CS311C_DATABASE2024
             }
         }
 
+        public event EventHandler StudentAdd;
+
         private void btnsave_Click(object sender, EventArgs e)
         {
             validationForm();
@@ -197,6 +199,7 @@ namespace CS311C_DATABASE2024
                             newstudent.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() + "', '" + DateTime.Now.ToShortTimeString() +
                                 "', 'Add','Students Management', '" + txtstudentID.Text + "', '" + studentID + "')");
                             MessageBox.Show("New Student Added", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            StudentAdd?.Invoke(this, EventArgs.Empty);
                             this.Close();
                         }
                     }

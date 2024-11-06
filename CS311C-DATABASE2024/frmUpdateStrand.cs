@@ -75,6 +75,8 @@ namespace CS311C_DATABASE2024
             }
         }
 
+        public event EventHandler StrandUpdate;
+
         private void btnsave_Click(object sender, EventArgs e)
         {
             validateForm();
@@ -92,6 +94,7 @@ namespace CS311C_DATABASE2024
                             updatestrand.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() + "', '" + DateTime.Now.ToShortTimeString() +
                                 "', 'Update','Strand Management', '" + txtstrand_code.Text + "', '" + username + "')");
                             MessageBox.Show("Strand Updated", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            StrandUpdate?.Invoke(this, EventArgs.Empty);
                             this.Close();
                         }
                     }

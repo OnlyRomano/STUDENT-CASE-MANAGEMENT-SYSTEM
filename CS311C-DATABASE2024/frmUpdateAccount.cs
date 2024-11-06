@@ -57,6 +57,8 @@ namespace CS311C_DATABASE2024
             }
         }
 
+
+        public event EventHandler AccountUpdate;
         private void btnsave_Click(object sender, EventArgs e)
         {
             validateForm();
@@ -75,6 +77,7 @@ namespace CS311C_DATABASE2024
                             updateaccount.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() + "', '" + DateTime.Now.ToShortTimeString() +
                                 "', 'Update','Accounts Management', '" + txtusername.Text + "', '" + username + "')");
                             MessageBox.Show("Account Updated", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            AccountUpdate?.Invoke(this, EventArgs.Empty);
                             this.Close();
                         }
                     }

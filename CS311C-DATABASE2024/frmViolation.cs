@@ -23,19 +23,12 @@ namespace CS311C_DATABASE2024
         private const int HTCAPTION = 0x2;
 
         private string username;
-
-        private Timer autorefresh;
         public frmViolation(string username)
         {
             InitializeComponent();
             this.username = username;
             panel2.MouseDown += new MouseEventHandler(Form_MouseDown);
             panel1.MouseDown += new MouseEventHandler(Form_MouseDown);
-
-            autorefresh = new Timer();
-            autorefresh.Interval = 5000;
-            autorefresh.Tick += AutoRefresh_Tick;
-            autorefresh.Start();
         }
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
@@ -82,6 +75,8 @@ namespace CS311C_DATABASE2024
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmNewViolation newViolation = new frmNewViolation(username);
+            newViolation.ViolationAdd += (s, ev) => frmViolation_Load(sender, e);
+
             newViolation.Show();
         }
 
@@ -93,6 +88,8 @@ namespace CS311C_DATABASE2024
             string editstatus = dataGridView1.Rows[row].Cells[3].Value.ToString();
 
             frmUpdateViolation updateViolation = new frmUpdateViolation(editcode, editdescription, edittype, editstatus, username);
+            updateViolation.ViolationUpdate += (s, ev) => frmViolation_Load(sender, e);
+
             updateViolation.Show();
         }
 
@@ -140,16 +137,6 @@ namespace CS311C_DATABASE2024
                     MessageBox.Show(ex.Message, "Error on Delete", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void AutoRefresh_Tick(object sender, EventArgs e)
-        {
-            frmViolation_Load(sender, e);
         }
     }
 }
