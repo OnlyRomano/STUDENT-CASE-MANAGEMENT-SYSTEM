@@ -16,7 +16,7 @@ namespace CS311C_DATABASE2024
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmloading());
+            Application.Run(new frmlogin());
         }
     }
 }

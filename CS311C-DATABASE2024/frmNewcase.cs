@@ -56,6 +56,9 @@ namespace CS311_DATABASE_2024
             txtviolationdescription.Clear();
             cmbviolationcount.SelectedIndex = -1; 
             errorProvider1.Clear();
+            txtschoolyear.Clear();
+            cmbconcern.SelectedIndex = -1;
+            txtdesciplinary.Clear();
         }
 
         private void validateForm()
@@ -66,6 +69,22 @@ namespace CS311_DATABASE_2024
             {
                 errorProvider1.SetError(cmbviolationid, "Select violation ID");
                 errorCount++;
+            }
+
+            if (string.IsNullOrEmpty(txtschoolyear.Text))
+            {
+                errorProvider1.SetError(txtschoolyear, "School Year is Empty");
+            }
+
+            if (cmbconcern.SelectedIndex < 0)
+            {
+                errorProvider1.SetError(cmbconcern, "Select Concern Level");
+                errorCount++;
+            }
+
+            if (string.IsNullOrEmpty(txtdesciplinary.Text))
+            {
+                errorProvider1.SetError(txtdesciplinary, "Disciplinary Action is Empty");
             }
         }
 
@@ -83,9 +102,9 @@ namespace CS311_DATABASE_2024
                     { 
                         string vtype = GetViolationType(cmbviolationid.Text);
 
-                        newcase.executeSQL("INSERT INTO tblcases (caseID, studentID, violationID, status, violation_count, createdby, datecreated) VALUES ('" + txtcaseid.Text
-                            + "', '" + txtstudentid.Text + "', '" + cmbviolationid.Text + "', 'ONGOING', '" + cmbviolationcount.Text.ToUpper() + "', '"
-                            + username + "', '" + DateTime.Now.ToShortDateString() + "')");
+                        newcase.executeSQL("INSERT INTO tblcases (caseID, studentID, violationID, status, violation_count, SchoolYear, concernLevel, disciplinary,  createdby, datecreated) VALUES ('" + txtcaseid.Text
+                            + "', '" + txtstudentid.Text + "', '" + cmbviolationid.Text + "', 'ONGOING', '" + cmbviolationcount.Text.ToUpper() + "', '" + txtschoolyear.Text + "', '" + cmbconcern.Text.ToUpper() + "', '" +
+                            txtdesciplinary.Text + "', '"+ username + "', '" + DateTime.Now.ToShortDateString() + "')");
 
                         if (newcase.rowAffected > 0)
                         {
@@ -109,6 +128,7 @@ namespace CS311_DATABASE_2024
         {
             this.Close();
         }
+
 
         private void LoadViolations()
         {

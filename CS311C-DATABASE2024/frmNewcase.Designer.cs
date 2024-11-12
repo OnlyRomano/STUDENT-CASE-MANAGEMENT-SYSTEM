@@ -57,6 +57,12 @@
             this.exit = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.txtschoolyear = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtdesciplinary = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbconcern = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
@@ -316,7 +322,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(419, 56);
+            this.panel1.Size = new System.Drawing.Size(786, 56);
             this.panel1.TabIndex = 62;
             // 
             // exit
@@ -325,7 +331,7 @@
             this.exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit.BackgroundImage")));
             this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exit.Location = new System.Drawing.Point(367, 12);
+            this.exit.Location = new System.Drawing.Point(740, 12);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(32, 31);
             this.exit.TabIndex = 34;
@@ -356,12 +362,83 @@
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             // 
+            // txtschoolyear
+            // 
+            this.txtschoolyear.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtschoolyear.Location = new System.Drawing.Point(495, 88);
+            this.txtschoolyear.Name = "txtschoolyear";
+            this.txtschoolyear.Size = new System.Drawing.Size(185, 26);
+            this.txtschoolyear.TabIndex = 64;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(399, 96);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(90, 18);
+            this.label12.TabIndex = 63;
+            this.label12.Text = "School Year:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(385, 128);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(104, 18);
+            this.label13.TabIndex = 65;
+            this.label13.Text = "Concern Level:";
+            // 
+            // txtdesciplinary
+            // 
+            this.txtdesciplinary.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdesciplinary.Location = new System.Drawing.Point(441, 216);
+            this.txtdesciplinary.Multiline = true;
+            this.txtdesciplinary.Name = "txtdesciplinary";
+            this.txtdesciplinary.Size = new System.Drawing.Size(293, 174);
+            this.txtdesciplinary.TabIndex = 68;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(474, 184);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(219, 18);
+            this.label14.TabIndex = 67;
+            this.label14.Text = "Procedure for Disciplinary Action:";
+            // 
+            // cmbconcern
+            // 
+            this.cmbconcern.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbconcern.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbconcern.FormattingEnabled = true;
+            this.cmbconcern.Items.AddRange(new object[] {
+            "Prepect of Discipline",
+            "Branch Osa",
+            "Dean of Student Affairs",
+            "Council of Discipline"});
+            this.cmbconcern.Location = new System.Drawing.Point(495, 120);
+            this.cmbconcern.Name = "cmbconcern";
+            this.cmbconcern.Size = new System.Drawing.Size(185, 26);
+            this.cmbconcern.TabIndex = 69;
+            // 
             // frmNewcase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
-            this.ClientSize = new System.Drawing.Size(419, 486);
+            this.ClientSize = new System.Drawing.Size(786, 486);
+            this.Controls.Add(this.cmbconcern);
+            this.Controls.Add(this.txtdesciplinary);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtschoolyear);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmbviolationcount);
             this.Controls.Add(this.btnclear);
@@ -430,5 +507,11 @@
         private System.Windows.Forms.PictureBox exit;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TextBox txtschoolyear;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cmbconcern;
+        private System.Windows.Forms.TextBox txtdesciplinary;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }

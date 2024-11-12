@@ -103,8 +103,11 @@ namespace CS311_DATABASE_2024
             string vcount = dataGridView1.CurrentRow.Cells["violation_count"].Value.ToString();
             string status = dataGridView1.CurrentRow.Cells["status"].Value.ToString();
             string action = dataGridView1.CurrentRow.Cells["action"].Value.ToString();
+            string schoolyear = dataGridView1.CurrentRow.Cells["SchoolYear"].Value.ToString();
+            string concernlevel = dataGridView1.CurrentRow.Cells["concernLevel"].Value.ToString();
+            string disciplinary = dataGridView1.CurrentRow.Cells["disciplinary"].Value.ToString();
 
-            frmUpdatecase updateCaseForm = new frmUpdatecase(username, caseID, studentID, lastname, firstname, middlename, level, strandcourse, vcode, description, vcount, status, action);
+            frmUpdatecase updateCaseForm = new frmUpdatecase(username, caseID, studentID, lastname, firstname, middlename, level, strandcourse, vcode, description, vcount, status, action, schoolyear, concernlevel, disciplinary);
             updateCaseForm.CaseUpdate += (s, ev) => txtsearch_TextChanged(sender, e);
 
             updateCaseForm.Show();
@@ -129,7 +132,7 @@ namespace CS311_DATABASE_2024
                     txtlevel.Text = studentData.Rows[0]["level"].ToString();
                     txtstrandcourse.Text = studentData.Rows[0]["strand_course"].ToString();
 
-                    string query = "SELECT caseID, violationID, status, violation_count, action, createdby, datecreated FROM tblcases WHERE studentID = '" + studentNumber + "'";
+                    string query = "SELECT caseID, violationID, status, violation_count, action, SchoolYear, concernLevel, disciplinary, createdby, datecreated FROM tblcases WHERE studentID = '" + studentNumber + "'";
                     DataTable caseData = cases.GetData(query);
 
                     DataTable resultData = new DataTable();
@@ -140,6 +143,9 @@ namespace CS311_DATABASE_2024
                     resultData.Columns.Add("violation_count");
                     resultData.Columns.Add("status");
                     resultData.Columns.Add("action");
+                    resultData.Columns.Add("SchoolYear");
+                    resultData.Columns.Add("concernLevel");
+                    resultData.Columns.Add("disciplinary");
                     resultData.Columns.Add("datecreated");
                     foreach (DataRow row in caseData.Rows)
                     {
@@ -150,7 +156,7 @@ namespace CS311_DATABASE_2024
                         string description = violationData.Rows.Count > 0 ? violationData.Rows[0]["description"].ToString() : string.Empty;
                         string vtype = violationData.Rows.Count > 0 ? violationData.Rows[0]["violation_type"].ToString() : string.Empty;
 
-                        resultData.Rows.Add(row["caseID"], vcode, description, vtype, row["violation_count"], row["status"], row["action"], row["datecreated"]);
+                        resultData.Rows.Add(row["caseID"], vcode, description, vtype, row["violation_count"], row["status"], row["action"], row["SchoolYear"], row["concernLevel"], row["disciplinary"], row["datecreated"]);
                         resultData.DefaultView.Sort = "caseID DESC";
                     }
 

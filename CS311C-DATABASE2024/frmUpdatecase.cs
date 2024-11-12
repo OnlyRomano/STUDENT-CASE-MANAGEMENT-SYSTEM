@@ -24,17 +24,22 @@ namespace CS311_DATABASE_2024
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HTCAPTION = 0x2;
 
-        private string username, caseID, studentID, lastname, firstname, middlename, level, strandcourse, vcode, description, vcount,status, action;
+        private string username, caseID, studentID, lastname, firstname, middlename, level, strandcourse, vcode, description, vcount,status, action, schoolyear, concernlevel, disciplinary;
 
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        private void txtaction_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         Class1 updatecase = new Class1("127.0.0.1", "cs311c2024", "jhunmark", "romano");
         private int errorCount;
         public frmUpdatecase(string username, string caseID,string studentID,string lastname,string firstname, string middlename, string level, string strandcourse, string vcode
-            ,string description,string vcount,string status, string action)
+            ,string description,string vcount,string status, string action, string schoolyear, string concernlevel, string disciplinary)
         {
             InitializeComponent();
             this.username = username;
@@ -50,6 +55,9 @@ namespace CS311_DATABASE_2024
             this.vcount = vcount;
             this.status = status;
             this.action = action;
+            this.schoolyear = schoolyear;
+            this.concernlevel = concernlevel;
+            this.disciplinary = disciplinary;
             this.Load += frmUpdatecase_Load;  // Subscribing to the Load event
             panel1.MouseDown += new MouseEventHandler(Form_MouseDown);
         }
@@ -69,6 +77,21 @@ namespace CS311_DATABASE_2024
             {
                 errorProvider1.SetError(cmbstatus, "Select status to resolved");
                 errorCount++;
+            }
+            if (string.IsNullOrEmpty(txtschoolyear.Text))
+            {
+                errorProvider1.SetError(txtschoolyear, "School Year is Empty");
+            }
+
+            if (cmbconcern.SelectedIndex < 0)
+            {
+                errorProvider1.SetError(cmbconcern, "Select Concern Level");
+                errorCount++;
+            }
+
+            if (string.IsNullOrEmpty(txtdesciplinary.Text))
+            {
+                errorProvider1.SetError(txtdesciplinary, "Disciplinary Action is Empty");
             }
         }
 
@@ -122,6 +145,8 @@ namespace CS311_DATABASE_2024
 
             // Set the action text value
             txtaction.Text = action;
+            txtschoolyear.Text = schoolyear;
+            txtdesciplinary.Text = disciplinary;
 
             // Disable txtaction if the status is "ONGOING"
             if (status.ToUpper() == "ONGOING")
@@ -132,6 +157,23 @@ namespace CS311_DATABASE_2024
             else
             {
                 txtaction.Enabled = true;
+            }
+
+            if (concernlevel == "PREPECT OF DISCIPLINE")
+            {
+                cmbconcern.SelectedIndex = 0;
+            }
+            else if (concernlevel == "BRANCH OSA")
+            {
+                cmbconcern.SelectedIndex = 1;
+            }
+            else if (concernlevel == "DEAN OF STUDENT AFFAIRS")
+            {
+                cmbconcern.SelectedIndex = 2;
+            }
+            else
+            {
+                cmbconcern.SelectedIndex = 3;
             }
         }
         private void LoadViolationIDs()
@@ -158,6 +200,9 @@ namespace CS311_DATABASE_2024
             cmbstatus.SelectedIndex = 0;
             txtaction.Clear();
             errorProvider1.Clear();
+            txtschoolyear.Clear();
+            cmbconcern.SelectedIndex = -1;
+            txtdesciplinary.Clear();
         }
 
         public event EventHandler CaseUpdate;
@@ -178,7 +223,7 @@ namespace CS311_DATABASE_2024
                     try
                     {
                         // Update the case in the database using the provided status and action
-                        updatecase.executeSQL("UPDATE tblcases SET status = '" + cmbstatus.Text.ToUpper() + "', action = '" + txtaction.Text.ToUpper()
+                        updatecase.executeSQL("UPDATE tblcases SET status = '" + cmbstatus.Text.ToUpper() + "', action = '" + txtaction.Text.ToUpper() + "', SchoolYear = '" + txtschoolyear.Text + "', concernLevel = '" + cmbconcern.Text.ToUpper() + "', disciplinary = '" + txtdesciplinary.Text
                         + "' WHERE caseID = '" + caseID + "'");
                         // Check if the update was successful (i.e., rows were affected)
                         if (updatecase.rowAffected > 0)
