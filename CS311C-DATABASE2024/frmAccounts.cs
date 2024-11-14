@@ -100,24 +100,29 @@ namespace CS311C_DATABASE2024
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Are you sure you want to Delete this account?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                string selectedUser = dataGridView1.Rows[row].Cells[0].Value.ToString();
-                try
+                int selectedIndex = dataGridView1.SelectedRows[0].Index;
+                string selectedUser = dataGridView1.Rows[selectedIndex].Cells[0].Value.ToString();
+
+                DialogResult dr = MessageBox.Show("Are you sure you want to Delete this account?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
                 {
-                    accounts.executeSQL("DELETE FROM tblaccounts WHERE username = '" + selectedUser + "'");
-                    if (accounts.rowAffected > 0)
+                    try
                     {
-                        accounts.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() +
-                            "', '" + DateTime.Now.ToShortTimeString() + "', 'Delete','Accounts Management', '" + selectedUser + "', '" + username + "')");
-                        MessageBox.Show("Account Deleted", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        frmAccounts_Load(sender, e);
+                        accounts.executeSQL("DELETE FROM tblaccounts WHERE username = '" + selectedUser + "'");
+                        if (accounts.rowAffected > 0)
+                        {
+                            accounts.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() +
+                                "', '" + DateTime.Now.ToShortTimeString() + "', 'Delete','Accounts Management', '" + selectedUser + "', '" + username + "')");
+                            MessageBox.Show("Account Deleted", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            frmAccounts_Load(sender, e);
+                        }
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error on Delete", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error on Delete", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

@@ -130,6 +130,7 @@ namespace CS311C_DATABASE2024
                         violation.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, ID, performedby) VALUES ('" + DateTime.Now.ToShortDateString() +
                             "', '" + DateTime.Now.ToShortTimeString() + "', 'Delete','Violation Management', '" + selectedViolation + "', '" + username + "')");
                         MessageBox.Show("Violation Deleted", "Massage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frmViolation_Load(sender, e);
                     }
                 }
                 catch (Exception ex)

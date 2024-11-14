@@ -41,10 +41,6 @@
             this.menucontainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMaintenance = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnaccount = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnstudents = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnstrand = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -53,6 +49,10 @@
             this.btnviolation = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btncase = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnstudents = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnaccount = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnabout = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -68,12 +68,12 @@
             this.panel11.SuspendLayout();
             this.menucontainer.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -134,7 +134,7 @@
             this.sidebar.Location = new System.Drawing.Point(0, 52);
             this.sidebar.Name = "sidebar";
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.sidebar.Size = new System.Drawing.Size(214, 647);
+            this.sidebar.Size = new System.Drawing.Size(66, 647);
             this.sidebar.TabIndex = 9;
             // 
             // panel11
@@ -207,62 +207,6 @@
             this.btnMaintenance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMaintenance.UseVisualStyleBackColor = false;
             this.btnMaintenance.Click += new System.EventHandler(this.btnMaintenance_Click_1);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnaccount);
-            this.panel3.Location = new System.Drawing.Point(3, 345);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(252, 51);
-            this.panel3.TabIndex = 4;
-            // 
-            // btnaccount
-            // 
-            this.btnaccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
-            this.btnaccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnaccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
-            this.btnaccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnaccount.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaccount.ForeColor = System.Drawing.Color.White;
-            this.btnaccount.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_account_30;
-            this.btnaccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnaccount.Location = new System.Drawing.Point(-14, -10);
-            this.btnaccount.Name = "btnaccount";
-            this.btnaccount.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnaccount.Size = new System.Drawing.Size(280, 68);
-            this.btnaccount.TabIndex = 2;
-            this.btnaccount.Text = "            Accounts";
-            this.btnaccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnaccount.UseVisualStyleBackColor = false;
-            this.btnaccount.Click += new System.EventHandler(this.btnaccount_Click_1);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnstudents);
-            this.panel4.Location = new System.Drawing.Point(3, 288);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(252, 51);
-            this.panel4.TabIndex = 5;
-            // 
-            // btnstudents
-            // 
-            this.btnstudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
-            this.btnstudents.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnstudents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
-            this.btnstudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnstudents.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnstudents.ForeColor = System.Drawing.Color.White;
-            this.btnstudents.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_student_30;
-            this.btnstudents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnstudents.Location = new System.Drawing.Point(-14, -10);
-            this.btnstudents.Name = "btnstudents";
-            this.btnstudents.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnstudents.Size = new System.Drawing.Size(280, 68);
-            this.btnstudents.TabIndex = 2;
-            this.btnstudents.Text = "            Students";
-            this.btnstudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnstudents.UseVisualStyleBackColor = false;
-            this.btnstudents.Click += new System.EventHandler(this.btnstudents_Click_1);
             // 
             // panel6
             // 
@@ -376,6 +320,62 @@
             this.btncase.UseVisualStyleBackColor = false;
             this.btncase.Click += new System.EventHandler(this.btncase_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnstudents);
+            this.panel4.Location = new System.Drawing.Point(3, 288);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(252, 51);
+            this.panel4.TabIndex = 5;
+            // 
+            // btnstudents
+            // 
+            this.btnstudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
+            this.btnstudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnstudents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.btnstudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnstudents.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnstudents.ForeColor = System.Drawing.Color.White;
+            this.btnstudents.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_student_30;
+            this.btnstudents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnstudents.Location = new System.Drawing.Point(-14, -10);
+            this.btnstudents.Name = "btnstudents";
+            this.btnstudents.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnstudents.Size = new System.Drawing.Size(280, 68);
+            this.btnstudents.TabIndex = 2;
+            this.btnstudents.Text = "            Students";
+            this.btnstudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnstudents.UseVisualStyleBackColor = false;
+            this.btnstudents.Click += new System.EventHandler(this.btnstudents_Click_1);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnaccount);
+            this.panel3.Location = new System.Drawing.Point(3, 345);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(252, 51);
+            this.panel3.TabIndex = 4;
+            // 
+            // btnaccount
+            // 
+            this.btnaccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(108)))), ((int)(((byte)(132)))));
+            this.btnaccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnaccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.btnaccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaccount.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaccount.ForeColor = System.Drawing.Color.White;
+            this.btnaccount.Image = global::CS311C_DATABASE2024.Properties.Resources.icons8_account_30;
+            this.btnaccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnaccount.Location = new System.Drawing.Point(-14, -10);
+            this.btnaccount.Name = "btnaccount";
+            this.btnaccount.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnaccount.Size = new System.Drawing.Size(280, 68);
+            this.btnaccount.TabIndex = 2;
+            this.btnaccount.Text = "            Accounts";
+            this.btnaccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnaccount.UseVisualStyleBackColor = false;
+            this.btnaccount.Click += new System.EventHandler(this.btnaccount_Click_1);
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.btnabout);
@@ -466,9 +466,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(214, 676);
+            this.statusStrip1.Location = new System.Drawing.Point(66, 676);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1435, 23);
+            this.statusStrip1.Size = new System.Drawing.Size(1583, 23);
             this.statusStrip1.TabIndex = 11;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -513,12 +513,12 @@
             this.panel11.ResumeLayout(false);
             this.menucontainer.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);

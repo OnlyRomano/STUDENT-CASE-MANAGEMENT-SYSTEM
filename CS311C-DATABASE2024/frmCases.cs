@@ -1,6 +1,7 @@
 ﻿using CS311C_DATABASE2024;
 using System;
 using System.Data;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 
@@ -8,6 +9,15 @@ namespace CS311_DATABASE_2024
 {
     public partial class frmCases : Form
     {
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
+        private const int WM_NCLBUTTONDOWN = 0xA1;
+        private const int HTCAPTION = 0x2;
+
         Class1 cases = new Class1("127.0.0.1", "cs311c2024", "jhunmark", "romano");
         private string username;
 
@@ -15,6 +25,18 @@ namespace CS311_DATABASE_2024
         {
             InitializeComponent();
             this.username = username;
+
+            panel2.MouseDown += new MouseEventHandler(Form_MouseDown);
+            panel1.MouseDown += new MouseEventHandler(Form_MouseDown);
+        }
+
+        private void Form_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
         }
 
         private void ClearStudentInformation()
@@ -184,11 +206,6 @@ namespace CS311_DATABASE_2024
             {
                 MessageBox.Show(ex.Message, "Error on Datagrid cellclick", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
