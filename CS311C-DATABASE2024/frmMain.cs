@@ -146,7 +146,10 @@ namespace CS311C_DATABASE2024
             {
                 btnaccount.Visible = false;
                 btnstudents.Visible = true;
+                btncourse.Visible = false;
+                btnstrand.Visible = false;
                 btnviolation.Visible = true;
+                btncase.Visible = true;
             }
             else
             {

@@ -88,7 +88,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1649, 52);
+            this.panel1.Size = new System.Drawing.Size(1395, 52);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
@@ -127,14 +127,14 @@
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.sidebar.Controls.Add(this.panel11);
             this.sidebar.Controls.Add(this.menucontainer);
-            this.sidebar.Controls.Add(this.panel8);
             this.sidebar.Controls.Add(this.panel9);
+            this.sidebar.Controls.Add(this.panel8);
             this.sidebar.Controls.Add(this.panel10);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 52);
             this.sidebar.Name = "sidebar";
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.sidebar.Size = new System.Drawing.Size(66, 647);
+            this.sidebar.Size = new System.Drawing.Size(66, 660);
             this.sidebar.TabIndex = 9;
             // 
             // panel11
@@ -169,11 +169,11 @@
             // 
             this.menucontainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
             this.menucontainer.Controls.Add(this.panel2);
-            this.menucontainer.Controls.Add(this.panel6);
-            this.menucontainer.Controls.Add(this.panel5);
-            this.menucontainer.Controls.Add(this.panel7);
             this.menucontainer.Controls.Add(this.panel12);
+            this.menucontainer.Controls.Add(this.panel7);
             this.menucontainer.Controls.Add(this.panel4);
+            this.menucontainer.Controls.Add(this.panel5);
+            this.menucontainer.Controls.Add(this.panel6);
             this.menucontainer.Controls.Add(this.panel3);
             this.menucontainer.Location = new System.Drawing.Point(3, 70);
             this.menucontainer.Name = "menucontainer";
@@ -211,7 +211,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.btnstrand);
-            this.panel6.Location = new System.Drawing.Point(3, 60);
+            this.panel6.Location = new System.Drawing.Point(3, 288);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(252, 51);
             this.panel6.TabIndex = 6;
@@ -239,7 +239,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btncourse);
-            this.panel5.Location = new System.Drawing.Point(3, 117);
+            this.panel5.Location = new System.Drawing.Point(3, 231);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(252, 51);
             this.panel5.TabIndex = 6;
@@ -267,7 +267,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.btnviolation);
-            this.panel7.Location = new System.Drawing.Point(3, 174);
+            this.panel7.Location = new System.Drawing.Point(3, 117);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(252, 51);
             this.panel7.TabIndex = 6;
@@ -295,7 +295,7 @@
             // panel12
             // 
             this.panel12.Controls.Add(this.btncase);
-            this.panel12.Location = new System.Drawing.Point(3, 231);
+            this.panel12.Location = new System.Drawing.Point(3, 60);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(252, 51);
             this.panel12.TabIndex = 7;
@@ -323,7 +323,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btnstudents);
-            this.panel4.Location = new System.Drawing.Point(3, 288);
+            this.panel4.Location = new System.Drawing.Point(3, 174);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(252, 51);
             this.panel4.TabIndex = 5;
@@ -379,7 +379,7 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.btnabout);
-            this.panel8.Location = new System.Drawing.Point(3, 127);
+            this.panel8.Location = new System.Drawing.Point(3, 184);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(243, 51);
             this.panel8.TabIndex = 4;
@@ -406,7 +406,7 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.btnreports);
-            this.panel9.Location = new System.Drawing.Point(3, 184);
+            this.panel9.Location = new System.Drawing.Point(3, 127);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(243, 51);
             this.panel9.TabIndex = 5;
@@ -466,9 +466,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(66, 676);
+            this.statusStrip1.Location = new System.Drawing.Point(66, 689);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1583, 23);
+            this.statusStrip1.Size = new System.Drawing.Size(1329, 23);
             this.statusStrip1.TabIndex = 11;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -493,7 +493,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1649, 699);
+            this.ClientSize = new System.Drawing.Size(1395, 712);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
