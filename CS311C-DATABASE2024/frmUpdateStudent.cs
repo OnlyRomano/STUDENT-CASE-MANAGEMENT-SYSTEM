@@ -200,7 +200,7 @@ namespace CS311C_DATABASE2024
                 DialogResult dr = MessageBox.Show("Are you sure you want to Update this student?", "Conformation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-                    string strandCourseCode = (cmbstrandandcourse.SelectedIndex < 0) ? "N/A" : cmbstrandandcourse.SelectedValue.ToString();
+                    string strandCourseCode = (cmbstrandandcourse.SelectedIndex < 0 || cmbstrandandcourse.Text == "N/A") ? "N/A" : cmbstrandandcourse.SelectedValue.ToString();
 
                     try
                     {
