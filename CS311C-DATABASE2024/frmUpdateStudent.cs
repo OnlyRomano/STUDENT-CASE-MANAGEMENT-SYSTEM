@@ -187,15 +187,6 @@ namespace CS311C_DATABASE2024
                 errorProvider1.SetError(cmblevel, "Select Level");
                 errorcount++;
             }
-
-            if (cmblevel.Text == "Senior High School" || cmblevel.Text == "College")
-            {
-                if (cmbstrandandcourse.SelectedIndex < 0)
-                {
-                    errorProvider1.SetError(cmbstrandandcourse, "Select Strand or Course");
-                    errorcount++;
-                }
-            }
         }
 
         public event EventHandler StudentUpdate;

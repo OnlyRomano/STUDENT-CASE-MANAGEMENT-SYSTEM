@@ -100,18 +100,6 @@ namespace CS311C_DATABASE2024
 
         private int row;
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                row = (int)e.RowIndex;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error on Datagrid cellclick", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Are you sure you want to Delete this Student?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -139,6 +127,18 @@ namespace CS311C_DATABASE2024
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                row = (int)e.RowIndex;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error on Datagrid cellclick", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

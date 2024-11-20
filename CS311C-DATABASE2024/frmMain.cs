@@ -21,7 +21,7 @@ namespace CS311C_DATABASE2024
             this.usertype = usertype;
         }
 
-        bool sidebarexpand = false;
+        bool sidebarexpand = true;
         private void sidebartimer_Tick(object sender, EventArgs e)
         {
             if (sidebarexpand)
