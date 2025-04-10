@@ -1,34 +1,44 @@
 USER MANUAL
+
 Project Developement
+
 ![image](https://github.com/user-attachments/assets/94dcdf64-75a3-4562-8a72-7c5fb2b0d3f2)
+
 Figure 1: Login Form
 Figure 1 displays the login form for the Arellano University Management System (AUMS). It consists of two text boxes where users input their username and password, and a button that validates the entered information against the system's database.
 
 ![image](https://github.com/user-attachments/assets/330fe172-5d19-41fd-98b1-0f661f9de221)
+
 Figure 2: Main Dashboard
 Figure 2 depicts the main dashboard of the Arellano University Incident Report Management System (AUIRMS). The interface features a dark teal sidebar on the left, displaying a menu of options including Maintenance, Search, Course, Violations, Case, Students, Accounts, About, Reports, and Logout. The main body of the screen is a light gray background, showcasing the Arellano University logo at the center. The bottom section displays the username of the currently logged-in user, indicating their administrator role.
 
 ![image](https://github.com/user-attachments/assets/fe1888ed-c46e-48ad-99ca-f292238029a9)
+
 Figure 3: Accounts Management
 Figure 3 shows the Accounts Management module of AUIRMS. It includes a search bar, a table listing accounts with details like username, password, and status, and icons for adding, updating, deleting, and refreshing accounts.
 
 ![image](https://github.com/user-attachments/assets/62d2b70f-3086-4c42-ab4e-d9d83bc82e1f)
+
 Figure 4: Add Account
 Figure 4 presents the "Add New Account" form within the AUIRMS Accounts Management module. This form allows users to create new accounts by inputting a username, password, and selecting a user type from a dropdown menu. The form also includes a "Show password" checkbox and "Save" and "Clear" buttons to submit or reset the form data.
  
 ![image](https://github.com/user-attachments/assets/59a53e36-66ee-489a-9c41-a470a9d7157f)
+
 Figure 5: Update Account
 Figure 5 displays the "Update Account" form within the AUIRMS Accounts Management module. This form allows users to modify existing account information. It displays the current username, a masked password field with a "Show password" checkbox, a dropdown menu for selecting the user type, and a dropdown menu for choosing the account status.
 
 ![image](https://github.com/user-attachments/assets/5db0ce51-c605-4611-9d1c-6c715adc66b3)
+
 Figure 6: Delete Account
 Figure 6 shows a confirmation dialog box within the AUIRMS Accounts Management module. This dialog box appears when a user attempts to delete an account, asking for confirmation with the message "Are you sure you want to delete this account?". The user can choose to proceed with the deletion or cancel the action.
 
 ![image](https://github.com/user-attachments/assets/20db020a-eca9-4118-ad7e-389aad3f4114)
+
 Figure 7: Students Management
 Figure 7 displays the Students Management module within the AUIRMS. It shows a table listing student information, including student ID, last name, first name, middle name, level, strand/course, created by, and date created. The table also includes a search bar to filter students based on specific criteria. Additionally, icons for adding, updating, deleting, and refreshing student records are provided.
 
 ![image](https://github.com/user-attachments/assets/d643677b-392d-4740-93da-d39da41c9c42)
+
 Figure 8: Add Student
 Figure 8 shows the "Add New Student" form within the AUIRMS Students Management module. This form allows users to add new student records by inputting the student ID, last name, first name, middle name, level, and strand/course. The form includes a "Save" button to submit the new student information and a "Clear" button to reset the form fields.
 
